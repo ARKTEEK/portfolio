@@ -12,7 +12,7 @@
 <aside
   class="fixed top-0 left-0 h-screen bg-surface border-r border-subtle flex flex-col z-50 shadow-sm"
   style="width: {$sidebarOpen ? '260px' : '68px'}">
-  <div class="flex items-center h-[72px] px-4 border-b border-subtle shrink-0">
+  <div class="flex items-center h-18 px-4 border-b border-subtle shrink-0">
     <div class="flex items-center gap-3 min-w-0">
       <div
         class="w-9 h-9 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0 overflow-hidden">
@@ -36,7 +36,7 @@
           <p class="text-sm font-semibold text-hi leading-tight truncate">
             {profile.name}
           </p>
-          <p class="text-[11px] font-medium text-dim uppercase tracking-wider">
+          <p class="text-2xs font-medium text-dim uppercase tracking-wider">
             {profile.role}
           </p>
         </div>
