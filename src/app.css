@@ -1,22 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Sora:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sora:wght@100..800&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  --color-canvas:     #0c0c0e;
-  --color-surface:    #111114;
-  --color-hover:      #18181c;
-  --color-active:     #1e1e24;
-  --color-line:       #242428;
-  --color-subtle:     #1a1a1f;
-  --color-hi:         #f0f0f2;
-  --color-lo:         #96969e;
-  --color-dim:        #58586a;
+  --color-canvas:     #0f1117;
+  --color-surface:    #161922;
+  --color-hover:      #1e2230;
+  --color-active:     #252b3d;
+  --color-line:       #2d334a;
+  --color-subtle:     #1a1d29;
+
+  --color-hi:         #e2e8f0;
+  --color-lo:         #94a3b8;
+  --color-dim:        #64748b;
+
   --color-accent:     #10b981;
-  --color-accent-lo:  #a7f3d0;
+  --color-accent-lo:  rgba(16, 185, 129, 0.15);
+
+  --color-highlight:
 
   --font-sans: 'Sora', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --font-mono: 'Jetbrains Mono', monospace;
 
   --spacing-sidebar:           220px;
   --spacing-sidebar-collapsed: 60px;
