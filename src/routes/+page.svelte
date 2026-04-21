@@ -35,8 +35,12 @@
 
 <section class="mb-10">
   <div class="flex items-center justify-between mb-5">
-    <h2 class="text-base font-bold text-hi">Featured Projects</h2>
-    <a href="/projects" class="text-xs font-mono text-accent">View all →</a>
+    <h2 class="text-base font-medium text-hi">Featured Projects</h2>
+    <a
+      href="/projects"
+      class="text-sm font-mono text-accent underline underline-offset-4 decoration-dotted hover:decoration-solid transition-all">
+      View all →
+    </a>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -47,11 +51,11 @@
 </section>
 
 <div class="flex items-center justify-between mb-5">
-  <h2 class="text-base font-bold text-hi">Widgets</h2>
+  <h2 class="text-base font-medium text-hi">Widgets</h2>
 </div>
 <StatsGrid {techTags} />
 
 <div class="flex items-center justify-between mb-5">
-  <h2 class="text-base font-bold text-hi">Commits</h2>
+  <h2 class="text-base font-medium text-hi">Commits</h2>
 </div>
 <CommitList {commits} />
