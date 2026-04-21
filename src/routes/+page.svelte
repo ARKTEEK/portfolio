@@ -46,6 +46,12 @@
   </div>
 </section>
 
+<div class="flex items-center justify-between mb-5">
+  <h2 class="text-base font-bold text-hi">Widgets</h2>
+</div>
 <StatsGrid {techTags} />
 
+<div class="flex items-center justify-between mb-5">
+  <h2 class="text-base font-bold text-hi">Commits</h2>
+</div>
 <CommitList {commits} />
