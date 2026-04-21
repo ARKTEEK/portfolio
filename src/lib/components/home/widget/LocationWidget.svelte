@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { IconMapPin } from "@tabler/icons-svelte";
   import MapWidget from "./MapWidget.svelte";
 
   let timeStr = $state("--:--:--");
@@ -22,7 +23,8 @@
 <div
   class="border border-subtle rounded-xl p-5 bg-surface flex flex-col gap-3 h-full">
   <div class="flex items-center gap-2">
-    <p class="text-sm font-bold text-hi">Based In</p>
+    <IconMapPin size={16} class="text-accent" />
+    <p class="text-sm font-medium text-hi">Based In</p>
   </div>
 
   <div
@@ -36,22 +38,11 @@
         <span class="text-2xs font-mono text-white/90 font-semibold">
           Kaunas, LT
         </span>
-        <span
-          class="text-[9px] font-mono text-white/40 uppercase tracking-wider">
-          UTC+3 · EEST
-        </span>
       </div>
-      <div class="flex items-center gap-1.5">
-        <span class="relative flex h-1.5 w-1.5">
-          <span
-            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75">
-          </span>
-          <span
-            class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-400">
-          </span>
-        </span>
+      <div class="flex flex-col items-center gap-1.5">
         <span class="font-mono text-2xs text-green-400 tabular-nums">
-          {timeStr}</span>
+          {timeStr}
+        </span>
       </div>
     </div>
   </div>
