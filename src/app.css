@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 @import "tailwindcss";
 
@@ -19,7 +19,6 @@
 
   --color-highlight:
 
-  --font-sans: 'Sora', sans-serif;
   --font-mono: 'Jetbrains Mono', monospace;
 
   --spacing-sidebar:           220px;
@@ -36,8 +35,17 @@
 }
 
 @layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply bg-canvas text-hi font-sans antialiased; }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-canvas text-hi font-mono antialiased;
+  }
+
   ::-webkit-scrollbar       { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { @apply bg-line rounded-full; }
