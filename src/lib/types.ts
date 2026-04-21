@@ -21,7 +21,10 @@ export interface Project {
 
 export interface Commit {
   repo: string;
+  repoFull: string;
   msg: string;
-  additions: string;
-  deletions: string;
+  url: string;
+  sha: string | null;
+  additions: number | undefined;
+  deletions: number | undefined;
 }

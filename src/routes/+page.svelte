@@ -1,8 +1,8 @@
 <script lang="ts">
   import Hero from "$lib/components/Hero.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
-  import CommitList from "$lib/components/home/CommitList.svelte";
-  import StatsGrid from "$lib/components/home/StatsGrid.svelte";
+  import CommitList from "$lib/components/home/commit/CommitList.svelte";
+  import StatsGrid from "$lib/components/home/widget/WidgetsGrid.svelte";
   import { projects } from "$lib/data/projects";
 
   const pinnedProjects = projects.filter((p) => p.pinned);
@@ -11,19 +11,11 @@
     "Java",
     ".NET / C#",
     "Svelte",
+    "React",
     "TypeScript",
-    "PostgreSQL",
+    "SQL",
     "Spring Boot",
     "Docker",
-  ];
-
-  const commits = [
-    {
-      repo: "portfolio",
-      msg: "refactor: componentize main page",
-      additions: "+120",
-      deletions: "-400",
-    },
   ];
 </script>
 
@@ -58,4 +50,4 @@
 <div class="flex items-center justify-between mb-5">
   <h2 class="text-base font-medium text-hi">Commits</h2>
 </div>
-<CommitList {commits} />
+<CommitList />
