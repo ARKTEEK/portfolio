@@ -8,7 +8,7 @@
 
 <header class="mb-12">
   <h1 class="text-3xl font-bold text-hi mb-4 tracking-tight">
-    Hey! I'm <span class="text-emerald-600 dark:text-emerald-400">{name}.</span>
+    Hey! I'm <span class="text-accent">{name}.</span>
   </h1>
 
   <p class="text-base text-lo leading-relaxed max-w-2xl mb-6">
@@ -17,7 +17,7 @@
       href="https://www.google.com/maps/place/Kaunas"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-emerald-600 dark:text-emerald-400 underline underline-offset-4 decoration-dotted hover:decoration-solid transition-all">
+      class="text-accent underline underline-offset-4 decoration-dotted hover:decoration-solid transition-all">
       {location}</a
     >. I build reliable backends with
     <span class="text-hi font-medium">Java</span> &
@@ -31,7 +31,7 @@
     <a
       href={resumeUrl}
       download
-      class="flex items-center gap-2 px-5 py-2.5 bg-transparent border-2 border-emerald-600/50 text-emerald-700 dark:text-emerald-400 dark:border-emerald-500/50 text-sm font-semibold rounded-lg hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-500 dark:hover:text-black transition-all shadow-sm">
+      class="flex items-center gap-2 px-5 py-2.5 bg-transparent border-2 border-color-accent text-accent text-sm font-semibold rounded-lg hover:bg-text-accent hover:text-white transition-all shadow-sm">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"
@@ -49,12 +49,12 @@
       Resume
     </a>
 
-    <div class="h-6 w-[1px] bg-lo/20 mx-1"></div>
+    <div class="h-6 w-px bg-lo/20 mx-1"></div>
 
     <a
       href={githubUrl}
       target="_blank"
-      class="p-2.5 text-lo hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all"
+      class="p-2.5 text-lo hover:text-accent hover:bg-accent/10 rounded-lg transition-all"
       aria-label="GitHub">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@
 
     <a
       href={emailUrl}
-      class="p-2.5 text-lo hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all"
+      class="p-2.5 text-lo hover:text-accent hover:bg-accent/10 rounded-lg transition-all"
       aria-label="Email">
       <svg
         xmlns="http://www.w3.org/2000/svg"

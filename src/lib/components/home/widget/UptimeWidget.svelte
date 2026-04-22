@@ -36,15 +36,15 @@
   </div>
 
   <div
-    class="flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg bg-green-400/8 border border-green-400/20">
+    class="flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg bg-accent/8 border border-accent/20">
     <span class="relative flex h-1.5 w-1.5 shrink-0">
       <span
-        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75">
+        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75">
       </span>
-      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-400">
+      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent">
       </span>
     </span>
-    <span class="text-2xs font-mono text-green-400 font-medium">
+    <span class="text-2xs font-mono text-accent font-medium">
       All Systems Running
     </span>
   </div>

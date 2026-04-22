@@ -1,29 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
 @import "tailwindcss";
-
 @theme {
-  --color-canvas:     #0f1117;
-  --color-surface:    #161922;
-  --color-hover:      #1e2230;
-  --color-active:     #252b3d;
-  --color-line:       #2d334a;
-  --color-subtle:     #1a1d29;
+  --color-canvas:     #111110;
+  --color-surface:    #1a1917;
+  --color-hover:      #232220;
+  --color-active:     #2c2a27;
+  --color-line:       #3a3733;
+  --color-subtle:     #171614;
 
-  --color-hi:         #e2e8f0;
-  --color-lo:         #94a3b8;
-  --color-dim:        #64748b;
+  --color-hi:         #f2ede8;
+  --color-lo:         #8c8480;
+  --color-dim:        #5a5652;
 
-  --color-accent:     #10b981;
-  --color-accent-lo:  rgba(16, 185, 129, 0.15);
+  --color-accent:     #ff5e14;
+  --color-accent-lo:  rgba(255, 94, 20, 0.12);
 
-  --color-highlight:
+  --color-highlight:  rgba(255, 94, 20, 0.18);
 
-  --font-mono: 'Jetbrains Mono', monospace;
-
+  --font-mono: 'JetBrains Mono', monospace;
   --spacing-sidebar:           220px;
   --spacing-sidebar-collapsed: 60px;
-
   --text-2xs:  11px;
   --text-xs:   12px;
   --text-sm:   13.5px;
@@ -41,11 +37,16 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
-
   body {
     @apply bg-canvas text-hi font-mono antialiased;
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+    background-attachment: fixed;
   }
-
   ::-webkit-scrollbar       { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { @apply bg-line rounded-full; }

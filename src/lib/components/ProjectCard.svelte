@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="border border-subtle rounded-xl overflow-hidden bg-surface hover:border-accent/30 transition-all group cursor-pointer">
+  class="border border-accent-lo rounded-xl overflow-hidden bg-surface hover:border-accent/30 transition-all group cursor-pointer">
   <div
     class="bg-[#111] px-4 py-3 flex items-center justify-between border-b border-white/5">
     <div class="flex items-center gap-3">
