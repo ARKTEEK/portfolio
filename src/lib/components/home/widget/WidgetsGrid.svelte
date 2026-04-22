@@ -1,8 +1,8 @@
 <script lang="ts">
-  import LocationWidget from "./widget/LocationWidget.svelte";
-  import AvailabilityWidget from "./widget/PlaceholderWidget.svelte";
-  import StackWidget from "./widget/StackWidget.svelte";
-  import UptimeWidget from "./widget/UptimeWidget.svelte";
+  import LocationWidget from "./LocationWidget.svelte";
+  import AvailabilityWidget from "./PlaceholderWidget.svelte";
+  import StackWidget from "./StackWidget.svelte";
+  import UptimeWidget from "./UptimeWidget.svelte";
 
   let {
     techTags = [],
