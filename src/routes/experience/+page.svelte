@@ -1,6 +1,6 @@
 <script lang="ts">
   import ExperienceCard from "$lib/components/ExperienceCard.svelte";
-  import PageHeader from "$lib/components/PageHeader.svelte";
+  import PageHeader from "$lib/components/common/PageHeader.svelte";
   import { experiences } from "$lib/data/experience";
 </script>
 

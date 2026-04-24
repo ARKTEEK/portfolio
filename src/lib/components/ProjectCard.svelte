@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Project } from "$lib/types";
-  import TerminalCard from "./TerminalCard.svelte";
+  import TerminalCard from "./common/TerminalCard.svelte";
 
   let { project }: { project: Project } = $props();
   const thumbnail = $derived(

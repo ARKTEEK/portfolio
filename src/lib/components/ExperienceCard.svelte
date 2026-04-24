@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Experience } from "$lib/types";
-  import TerminalCard from "./TerminalCard.svelte";
+  import TerminalCard from "./common/TerminalCard.svelte";
 
   let { exp }: { exp: Experience } = $props();
 </script>

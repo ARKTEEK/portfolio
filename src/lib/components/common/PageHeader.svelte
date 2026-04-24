@@ -11,7 +11,5 @@
     ~/{path}
   </p>
   <h1 class="text-2xl font-bold text-hi tracking-tight mb-3">{title}</h1>
-  <p class="text-sm text-lo leading-relaxed max-w-xl">
-    {description}
-  </p>
+  <p class="text-sm text-lo leading-relaxed max-w-xl mb-6">{description}</p>
 </header>
