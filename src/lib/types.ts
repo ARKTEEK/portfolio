@@ -35,3 +35,13 @@ export interface Commit {
   additions: number | undefined;
   deletions: number | undefined;
 }
+
+export interface Experience {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  highlights: string[];
+  tags: string[];
+  website: string;
+}
