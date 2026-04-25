@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import type { Project } from "$lib/types";
   import TerminalCard from "./common/TerminalCard.svelte";
 
@@ -12,7 +13,7 @@
   const hasSource = $derived(!!project.link && project.link !== "");
 </script>
 
-<a href="/projects/{project.slug}" class="block no-underline">
+<a href="{base}/projects/{project.slug}" class="block no-underline">
   <TerminalCard
     path="~/projects/{project.slug}"
     class="flex h-full cursor-pointer flex-col overflow-hidden">
