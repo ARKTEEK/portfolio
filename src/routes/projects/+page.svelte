@@ -1,5 +1,6 @@
 <script lang="ts">
   import PageHeader from "$lib/components/common/PageHeader.svelte";
+  import SectionHeader from "$lib/components/common/SectionHeader.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import { projects } from "$lib/data/projects";
   import type { ProjectType } from "$lib/types";
@@ -93,25 +94,17 @@
 <PageHeader
   path="projects"
   title="All Projects"
-  description="A full list of things I've built — personal tools, client work, and experiments." />
+  description="A full list of things I've built - personal tools, client work, and experiments." />
 
 <div class="mb-10 space-y-4">
   <div>
-    <div class="flex items-center gap-2 mb-2.5">
-      <span class="text-xs font-mono text-dim tracking-widest uppercase">
-        filter_by_tag
-      </span>
-      {#if selectedTags.length > 0}
-        <span class="text-xs font-mono text-accent/70">
-          · {selectedTags.length} active
-        </span>
-        <button
-          onclick={clearFilters}
-          class="ml-auto text-xs font-mono text-dim hover:text-lo transition-colors cursor-pointer">
-          [clear_all]
-        </button>
-      {/if}
-    </div>
+    <SectionHeader
+      title="filter_by_tag"
+      meta={selectedTags.length > 0
+        ? `${selectedTags.length} active`
+        : undefined}
+      action={selectedTags.length > 0 ? "[clear_all]" : undefined}
+      onaction={clearFilters} />
     <div class="flex flex-wrap gap-2">
       {#each allTags as tag}
         {@const active = selectedTags.includes(tag)}
@@ -130,12 +123,7 @@
 
 {#if pinnedProjects.length > 0 && !hasActiveFilters}
   <section class="mb-12">
-    <div class="flex items-center gap-3 mb-5">
-      <span class="text-xs font-mono text-accent tracking-widest uppercase">
-        // pinned
-      </span>
-      <div class="flex-1 h-px bg-accent/10"></div>
-    </div>
+    <SectionHeader title="pinned" meta={pinnedProjects.length.toString()} />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {#each pinnedProjects as project (project.id ?? project.title)}
         <ProjectCard {project} />
@@ -145,15 +133,9 @@
 {/if}
 
 <section>
-  <div class="flex items-center gap-3 mb-5">
-    <span class="text-xs font-mono text-dim tracking-widest uppercase">
-      {hasActiveFilters ? "// filtered" : "// all_projects"}
-    </span>
-    <div class="flex-1 h-px bg-line/40"></div>
-    <p class="text-xs font-mono text-dim">
-      {projects.filter((p) => !p.pinned).length} projects
-    </p>
-  </div>
+  <SectionHeader
+    title={hasActiveFilters ? "filtered" : "all_projects"}
+    meta="{projects.filter((p) => !p.pinned).length} projects" />
 
   {#if visibleProjects.length > 0}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

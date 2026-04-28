@@ -1,12 +1,12 @@
 <script lang="ts">
   import Hero from "$lib/components/Hero.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
+  import SectionHeader from "$lib/components/common/SectionHeader.svelte";
   import CommitList from "$lib/components/home/commit/CommitList.svelte";
   import StatsGrid from "$lib/components/home/widget/WidgetsGrid.svelte";
   import { projects } from "$lib/data/projects";
 
   const pinnedProjects = projects.filter((p) => p.pinned);
-
   const techTags = [
     "Java",
     ".NET / C#",
@@ -26,15 +26,7 @@
 <Hero />
 
 <section class="mb-10">
-  <div class="flex items-center justify-between mb-5">
-    <h2 class="text-base font-medium text-hi">Featured Projects</h2>
-    <a
-      href="/projects"
-      class="text-sm font-mono text-accent underline underline-offset-4 decoration-dotted hover:decoration-solid transition-all">
-      View all →
-    </a>
-  </div>
-
+  <SectionHeader title="featured_projects" href="/projects" />
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {#each pinnedProjects as project}
       <ProjectCard {project} />
@@ -42,12 +34,12 @@
   </div>
 </section>
 
-<div class="flex items-center justify-between mb-5">
-  <h2 class="text-base font-medium text-hi">Widgets</h2>
-</div>
-<StatsGrid {techTags} />
+<section class="mb-10">
+  <SectionHeader title="widgets" meta="stats" />
+  <StatsGrid {techTags} />
+</section>
 
-<div class="flex items-center justify-between mb-5">
-  <h2 class="text-base font-medium text-hi">Commits</h2>
-</div>
-<CommitList />
+<section class="mb-10">
+  <SectionHeader title="commits" meta="git log" />
+  <CommitList />
+</section>

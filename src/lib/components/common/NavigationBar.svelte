@@ -11,7 +11,6 @@
     {@const isActive =
       page.url.pathname === fullHref ||
       (page.url.pathname.startsWith(fullHref) && fullHref !== (base || "/"))}
-
     {#if i > 0}
       <span class="text-dim text-xs mx-2 select-none">/</span>
     {/if}
@@ -24,9 +23,7 @@
       {isActive ? `[ ${item.label} ]` : item.label}
     </a>
   {/each}
-
-  <div class="flex-1"></div>
-
+  <div class="flex-1 border-t border-dashed border-line mx-3"></div>
   <button
     onclick={() => locale.set($locale === "en" ? "lt" : "en")}
     class="text-xs font-semibold cursor-pointer transition-colors duration-150 select-none"
