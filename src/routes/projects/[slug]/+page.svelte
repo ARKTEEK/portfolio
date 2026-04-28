@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { page } from "$app/stores";
   import { projects } from "$lib/data/projects";
 
@@ -29,7 +30,7 @@
   <article class="max-w-4xl mx-auto py-12 px-4">
     <div class="flex justify-between items-center mb-12">
       <a
-        href="/projects"
+        href="{base}/projects"
         class="text-xs font-mono text-dim hover:text-accent transition-all flex items-center gap-2 group">
         <span class="group-hover:-translate-x-1 transition-transform">←</span> BACK_TO_PROJECTS
       </a>

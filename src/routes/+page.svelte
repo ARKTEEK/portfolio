@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import SectionHeader from "$lib/components/common/SectionHeader.svelte";
   import Hero from "$lib/components/home/Hero.svelte";
@@ -26,7 +27,7 @@
 <Hero />
 
 <section class="mb-10">
-  <SectionHeader title="featured_projects" href="/projects" />
+  <SectionHeader title="featured_projects" href="{base}/projects" />
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {#each pinnedProjects as project}
       <ProjectCard {project} />
