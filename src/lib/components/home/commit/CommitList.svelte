@@ -35,7 +35,7 @@
   });
 </script>
 
-<section class="border border-subtle rounded-xl bg-surface overflow-hidden">
+<section class="border border-line rounded-xl bg-surface overflow-hidden">
   <header
     class="flex items-center justify-between px-5 py-4 border-b border-subtle">
     <p class="text-sm font-bold text-hi">Recent Commits</p>
