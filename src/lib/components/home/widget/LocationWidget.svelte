@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { IconMapPin } from "@tabler/icons-svelte";
   import MapWidget from "./MapWidget.svelte";
+  import WidgetCard from "./WidgetCard.svelte";
 
   let timeStr = $state("--:--:--");
 
@@ -20,13 +20,7 @@
   });
 </script>
 
-<div
-  class="border border-subtle rounded-xl p-5 bg-surface flex flex-col gap-3 h-full">
-  <div class="flex items-center gap-2">
-    <IconMapPin size={16} class="text-accent" />
-    <p class="text-sm font-medium text-hi">Based In</p>
-  </div>
-
+<WidgetCard title="location">
   <div
     class="flex-1 rounded-xl overflow-hidden relative border border-white/5 min-h-26">
     <MapWidget />
@@ -46,4 +40,4 @@
       </div>
     </div>
   </div>
-</div>
+</WidgetCard>

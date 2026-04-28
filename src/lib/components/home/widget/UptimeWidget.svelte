@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { IconServerBolt } from "@tabler/icons-svelte";
+  import WidgetCard from "./WidgetCard.svelte";
 
   let uptimeStr = $state("00:00:00");
 
@@ -18,13 +18,7 @@
   });
 </script>
 
-<div
-  class="border border-subtle rounded-xl p-5 bg-surface flex flex-col gap-3 h-full">
-  <div class="flex items-center gap-2">
-    <IconServerBolt size={16} class="text-accent" />
-    <p class="text-sm font-medium text-hi">Uptime</p>
-  </div>
-
+<WidgetCard title="uptime">
   <div class="flex-1 flex flex-col items-center justify-center gap-1">
     <p
       class="font-mono text-2xl font-bold text-accent tabular-nums tracking-tight">
@@ -48,4 +42,4 @@
       All Systems Running
     </span>
   </div>
-</div>
+</WidgetCard>

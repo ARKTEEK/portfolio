@@ -1,9 +1,9 @@
 <script lang="ts">
-  import Hero from "$lib/components/Hero.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import SectionHeader from "$lib/components/common/SectionHeader.svelte";
+  import Hero from "$lib/components/home/Hero.svelte";
+  import StatsGrid from "$lib/components/home/WidgetsGrid.svelte";
   import CommitList from "$lib/components/home/commit/CommitList.svelte";
-  import StatsGrid from "$lib/components/home/widget/WidgetsGrid.svelte";
   import { projects } from "$lib/data/projects";
 
   const pinnedProjects = projects.filter((p) => p.pinned);
