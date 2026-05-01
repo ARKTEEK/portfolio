@@ -1,10 +1,21 @@
 <script lang="ts">
-
   let { name = "Mindaugas", location = "Lithuania, Kaunas" } = $props();
-
-  const resumeUrl = "/resume.pdf";
+  const resumeFiles = {
+    en: "/Lekavicius_Mindaugas_EN_Resume.pdf",
+    lt: "/Lekavicius_Mindaugas_LT_Resume.pdf",
+  };
   const githubUrl = "https://github.com/ARKTEEK";
   const emailUrl = "mailto:minlekav@gmail.com";
+
+  let resumeOpen = $state(false);
+
+  function toggleResume() {
+    resumeOpen = !resumeOpen;
+  }
+
+  function closeResume() {
+    resumeOpen = false;
+  }
 </script>
 
 <header class="mb-10">
@@ -26,28 +37,69 @@
     &
     <span class="text-hi font-medium">React</span>.
   </p>
-
   <div class="flex items-center gap-2 mb-6">
-    <a
-      href={resumeUrl}
-      download
-      class="flex items-center gap-2 px-5 py-2.5 bg-transparent border-2 border-accent text-accent text-sm font-semibold rounded-lg hover:bg-accent hover:text-canvas transition-all">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <polyline points="7 10 12 15 17 10" />
-        <line x1="12" x2="12" y1="15" y2="3" />
-      </svg>
-      Resume
-    </a>
+    <div class="relative">
+      <button
+        onclick={toggleResume}
+        class="flex items-center gap-2 px-5 py-2.5 bg-transparent border-2 border-accent text-accent text-sm font-semibold rounded-lg hover:bg-accent hover:text-canvas transition-all">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" x2="12" y1="15" y2="3" />
+        </svg>
+        Resume
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="transition-transform duration-200 {resumeOpen
+            ? 'rotate-180'
+            : ''}">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+
+      {#if resumeOpen}
+        <div
+          class="absolute top-full left-0 mt-1.5 w-full rounded-lg border border-accent/20 bg-canvas shadow-lg overflow-hidden z-10"
+          onmouseleave={closeResume}>
+          <a
+            href={resumeFiles.en}
+            download
+            onclick={closeResume}
+            class="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-lo hover:text-accent hover:bg-accent/10 transition-all">
+            <span class="text-base leading-none">🇬🇧</span>
+            English
+          </a>
+          <div class="h-px bg-lo/10 mx-3"></div>
+
+          <a
+            href={resumeFiles.lt}
+            download
+            onclick={closeResume}
+            class="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-lo hover:text-accent hover:bg-accent/10 transition-all">
+            <span class="text-base leading-none">🇱🇹</span>
+            Lithuanian
+          </a>
+        </div>
+      {/if}
+    </div>
+
     <div class="h-6 w-px bg-lo/20 mx-1"></div>
     <a
       href={githubUrl}
