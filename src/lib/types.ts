@@ -12,6 +12,7 @@ export interface Project {
   tags: string[];
   link?: string;
   images?: string[];
+  thumbnail?: string;
   video?: string;
   pinned: boolean;
   type: ProjectType;

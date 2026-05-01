@@ -4,12 +4,8 @@
   import TerminalCard from "./common/TerminalCard.svelte";
 
   let { project }: { project: Project } = $props();
-  const thumbnail = $derived(
-    project.images?.[0] ??
-      (project.video
-        ? `https://img.youtube.com/vi/${project.video}/mqdefault.jpg`
-        : null),
-  );
+  const thumbnailPath = $derived(project.thumbnail);
+
   const hasSource = $derived(!!project.link && project.link !== "");
 </script>
 
@@ -33,16 +29,23 @@
       {/if}
     {/snippet}
 
-    {#if thumbnail}
+    {#if thumbnailPath}
       <div
         class="border-line relative mx-4 mt-4 h-32 overflow-hidden rounded border">
         <img
-          src={thumbnail}
+          src={thumbnailPath}
           alt={project.title}
           class="h-full w-full object-cover" />
         <div
           class="absolute inset-0 bg-linear-to-t from-[#0a0a0a] to-transparent opacity-60">
         </div>
+      </div>
+    {:else}
+      <div
+        class="border-line relative mx-4 mt-4 h-32 overflow-hidden rounded border flex items-center justify-center bg-[#0a0a0a]/50">
+        <span class="font-mono text-6xl text-dim opacity-10 tracking-widest">
+          [EMPTY]
+        </span>
       </div>
     {/if}
     <div class="flex min-h-0 flex-1 flex-col p-4">
