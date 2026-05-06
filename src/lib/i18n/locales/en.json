@@ -105,38 +105,50 @@
   },
   "projects": {
     "lutra-ledger": {
-      "description": "An application made for UAB Lutra that generates PDF documents based on selected services and user information.",
+      "description": "A high-performance desktop utility developed for UAB Lutra to automate the generation of structured PDF service documents.",
       "content": [
         "# Overview",
-        "Lutra Ledger is a desktop application built for UAB Lutra. It takes chosen service details and user information and automatically generates clean, structured PDF documents.",
-        "## Features",
-        "- Select from a predefined list of services and auto-populate document fields.",
-        "- Generates ready-to-print PDF output using a consistent template.",
-        "- Stores client and service data locally using **SQLite** for offline-first operation.",
-        "- Built as a native desktop app with **Tauri + Rust**, keeping the binary lightweight."
+        "Lutra Ledger streamlines administrative workflows by transforming complex service data and client information into standardized, print-ready PDF reports.",
+        "## Key Features",
+        "- **Automated PDF Generation**: Converts user-selected service parameters into structured documents using a consistent, professional template.",
+        "- **Data Persistence**: Robust local storage of client and service records, ensuring full functionality without an internet connection.",
+        "- **Search & Auto-populate**: Intelligent filtering of services to accelerate document creation and minimize manual data entry errors.",
+        "## Technical Stack",
+        "- **Frontend Core**: Built with **Svelte** and **TypeScript** for a reactive, type-safe user interface.",
+        "- **Desktop Runtime**: Utilizes **Tauri** to bridge the web-based frontend with a powerful **Rust** backend.",
+        "- **Performance**: Leveraging Rust ensures a minimal binary size and native-level execution speeds with memory safety.",
+        "- **Database**: Powered by **SQLite** for lightweight, serverless, and reliable local data management."
       ]
     },
     "rhythmic": {
-      "description": "An application that helps you manage music playlists across YouTube, Spotify, and SoundCloud in one place.",
+      "description": "A cross-platform music management tool to organize, version, and synchronize playlists between Spotify, YouTube, and SoundCloud.",
       "content": [
         "# Overview",
-        "Rhythmic lets you consolidate and control music playlists from multiple platforms without switching between apps.",
-        "## Features",
-        "- Integrated **three OAuth providers** (Google, Spotify, SoundCloud) for unified authentication.",
-        "- Playlist CRUD operations synced across services via a **.NET** backend.",
-        "- Frontend built in **React + TypeScript** with a responsive, minimal UI.",
-        "- **MySQL** schema designed to handle cross-platform playlist and track metadata."
+        "Rhythmic addresses the fragmentation of digital music by providing a single interface to control libraries across multiple streaming services.",
+        "## Core Capabilities",
+        "- **Cross-Platform Sync**: Transfer and synchronize playlists from one provider to another seamlessly.",
+        "- **Version Control**: Track changes to your playlists over time, allowing you to revert or manage different iterations.",
+        "- **Smart Organization**: Automatically detect duplicate tracks and split oversized playlists into manageable segments.",
+        "## Technical Architecture",
+        "- Built with a **React + TypeScript** frontend for a fast, responsive user experience.",
+        "- Powered by a **.NET 9** backend utilizing **ASP.NET Core Web API** and **Entity Framework Core**.",
+        "- Scalable **MySQL** database design to manage complex cross-platform track metadata and user sessions.",
+        "- Secure authentication integrated via **OAuth 2.0** for Google, Spotify, and SoundCloud."
       ]
     },
     "blaze-website": {
-      "description": "The official website for Blaze.lt, showcasing the company's services and portfolio.",
+      "description": "A high-performance web platform for Blaze.lt, featuring real-time Minecraft server synchronization and automated payment processing.",
       "content": [
         "# Overview",
-        "A modern, user-friendly marketing site built for Blaze.lt to present their services, past work, and contact details.",
-        "## Stack",
-        "- Built with **Svelte** and **Tailwind CSS** for fast, maintainable frontend code.",
-        "- Dynamic content driven by a **MySQL** backend.",
-        "- Fully responsive and optimised for SEO and accessibility."
+        "Blaze.lt is a sophisticated gaming community portal that bridges the gap between web services and live game server data.",
+        "## Core Integrations",
+        "- **Minecraft Live-Sync**: Real-time communication with the game server via HTTPS and shared MySQL databases to display live player statistics and server status.",
+        "- **E-commerce & Payments**: Full **Paysera** integration for automated service purchases and donation processing.",
+        "- **Real-time Data**: Leverages Svelte's reactivity to show up-to-the-minute information without requiring manual page refreshes.",
+        "## Technical Stack",
+        "- **Svelte Architecture**: Built entirely with **Svelte** for a seamless, ultra-fast single-page experience.",
+        "- **Type-Safe Data**: Utilizes **Drizzle ORM** for robust, type-safe interactions with the MySQL backend.",
+        "- **Modern Styling**: Powered by **Tailwind CSS**, focusing on a gaming-centric aesthetic that is fully responsive and accessible."
       ]
     },
     "shorty": {
@@ -151,65 +163,79 @@
       ]
     },
     "timitis": {
-      "description": "A full-cycle IT service order management platform bridging client requests and service delivery.",
+      "description": "An enterprise-grade Project Management System (PMS) featuring multi-tenant access control for internal employees and external clients.",
       "content": [
         "# Overview",
-        "Built during an internship at Timitis, this platform manages the full lifecycle of IT service orders from submission to resolution.",
-        "## Architecture",
-        "- **React + TypeScript** frontend with a component-driven, type-safe UI.",
-        "- **Spring Boot (Java)** backend exposing secure RESTful APIs.",
-        "- Relational database schema designed for high-volume service request querying.",
-        "## Process",
-        "- Operated in an **Agile** environment with daily stand-ups and sprint planning.",
-        "- Version-controlled with Git across a multi-developer team."
+        "Developed during a professional internship, this system centralizes project lifecycles, task tracking, and client relationship management into a single secure platform.",
+        "## Role-Based Access Control (RBAC)",
+        "- **Admin/Manager**: Full CRUD capabilities for users, companies, and project assignments.",
+        "- **Employee**: Dedicated dashboard for tracking assigned tasks, logging work hours, and collaborative commenting.",
+        "- **Client**: External portal for tracking project progress, submitting new tasks, and providing feedback.",
+        "## Technical Architecture",
+        "- **Spring Boot Backend**: Utilized **Spring Data JPA** and **MapStruct** to create a highly efficient, boilerplate-free data layer.",
+        "- **React Frontend**: Built a responsive, type-safe UI using **TypeScript** and **Axios** for seamless REST API communication.",
+        "- **Data Integrity**: Designed a complex relational schema to handle interconnected entities like Users, Companies, Projects, and Tasks.",
+        "- **System Settings**: Implemented a dynamic administrative module to configure SMTP, Database connections, and file upload parameters at runtime."
       ]
     },
     "worsetagram": {
-      "description": "An Android clone of Instagram — deliberately worse, but functional.",
+      "description": "A functional Instagram-inspired Android application developed to explore Kotlin, Jetpack Compose, and modern mobile architecture.",
       "content": [
         "# Overview",
-        "A tongue-in-cheek Android app that replicates Instagram's core features in a deliberately rough way.",
-        "## Features",
-        "- Photo upload, user following, and a feed — all working, none polished.",
-        "- **.NET** backend handling auth and media storage.",
-        "- Local data persistence via **SQLite**."
+        "Worsetagram serves as a comprehensive learning project, implementing the core social media experience from media uploads to real-time messaging.",
+        "## Core Features",
+        "- **Social Ecosystem**: Full game-loop of content creation, including image uploads, captions, and interactive feeds with likes and comments.",
+        "- **Direct Messaging**: Real-time communication layer allowing users to exchange private messages.",
+        "- **Discovery & Profile**: Search functionality for finding users and dedicated profile management for personalizing account details.",
+        "## Technical Architecture",
+        "- **Modern Android Stack**: Built with **Jetpack Compose** for a declarative UI and **Dagger-Hilt** for robust dependency injection.",
+        "- **Clean Architecture**: Organized into Data, Domain, and UI layers to maintain a scalable and testable codebase.",
+        "- **Firebase Integration**: Utilizes **Firebase Auth** for security, **Firestore** for real-time data syncing, and **Firebase Storage** for media assets.",
+        "- **Code Quality**: Enforced strict formatting standards using **ktfmt** (based on Google Java Format)."
       ]
     },
     "purrislav": {
-      "description": "A Discord bot that sends birthday reminders to a specified channel.",
+      "description": "A performance-focused Discord bot built in Rust that automates community engagement through birthday tracking and dynamic role management.",
       "content": [
         "# Overview",
-        "Purrislav tracks birthdays entered by server members and sends a notification to a configured channel on the day.",
-        "## Features",
-        "- Users register birthdays via slash commands.",
-        "- Daily cron-style check fires notifications at midnight in the server's timezone.",
-        "- Written in **Rust** for low resource usage — runs on a cheap VPS indefinitely.",
-        "- Stores all data in **SQLite** with no external dependencies."
+        "Purrislav is a lightweight utility bot designed for long-term stability and low-footprint hosting on a VPS.",
+        "## Core Features",
+        "- **Birthday System**: Server members can register their birthdays; the bot performs a daily automated check to send reminders to a designated channel.",
+        "- **Color Roles**: Provides an intuitive interface for users to create and manage custom colored roles within the server.",
+        "- **Slash Commands**: Fully integrated with the modern Discord API for a seamless user experience.",
+        "## Technical Stack",
+        "- Developed using **Rust** and the **Poise** framework for high concurrency and type safety.",
+        "- Data persistence handled by **SQLite**, providing a self-contained and portable database solution.",
+        "- Utilizes **Diesel ORM** for robust database migrations and compile-time checked queries."
       ]
     },
     "blackjack": {
-      "description": "A browser-based Blackjack game built with JavaScript and HTML using Glassmorphism styling.",
+      "description": "A browser-based implementation of the classic casino card game, featuring Glassmorphism UI and optimized for smooth web play.",
       "content": [
         "# Overview",
-        "A classic Blackjack implementation playable in the browser, styled with a Glassmorphism aesthetic.",
-        "## Features",
-        "- Full game loop: deal, hit, stand, bust, and win detection.",
-        "- Virtual dealer with basic AI behaviour.",
-        "- Pure **JavaScript + HTML/CSS** — zero dependencies."
+        "A pure JavaScript game that simulates a high-stakes Blackjack experience directly in your browser without the need for external libraries.",
+        "## Game Mechanics",
+        "- **Scoring Logic**: Cards 2-10 hold face value, J/Q/K are worth 10, and Aces are dynamically valued at 11.",
+        "- **Objective**: Compete against a virtual dealer to reach a total as close to 21 as possible without 'busting'.",
+        "- **Dealer AI**: Includes an automated dealer behavior loop for a consistent single-player challenge.",
+        "## Highlights",
+        "- **Glassmorphism Design**: Minimalist, frosted-glass interface built with modern CSS properties.",
+        "- **Vanilla Implementation**: Developed using only **HTML5**, **CSS3**, and **ES6+ JavaScript**, ensuring fast load times and zero dependencies."
       ]
     },
     "sortvisualizer": {
-      "description": "A real-time visualiser for sorting algorithms, built with ASP .NET and C#.",
+      "description": "A desktop-based visualization tool built with WinForms to demonstrate the mechanics and efficiency of various sorting algorithms.",
       "content": [
         "# Overview",
-        "SortVisualizer renders sorting algorithms step-by-step so you can watch them work in real time.",
+        "SortVisualizer provides a graphical representation of how data moves during sorting, helping to understand the time complexity and logic behind different algorithms.",
         "## Supported Algorithms",
-        "- Bubble Sort, Selection Sort, Insertion Sort",
-        "- Merge Sort, Quick Sort",
-        "## Features",
-        "- Adjustable array size and animation speed.",
-        "- Step counter and comparison tracker shown live.",
-        "- Built on **ASP .NET** with a lightweight **C#** backend serving the visualiser state."
+        "- **Divide & Conquer**: Merge Sort, Quick Sort, and Heap Sort.",
+        "- **Classic Sorts**: Bubble Sort, Selection Sort, and Insertion Sort.",
+        "- **Unique Sorts**: Gnome Sort and Pancake Sort.",
+        "## Key Features",
+        "- **Execution Timing**: Built-in timers to compare the real-world performance of each algorithm side-by-side.",
+        "- **Step-by-Step Rendering**: Watch the array transform in real-time as the algorithms swap and compare elements.",
+        "- **Native Performance**: Built entirely in **C#** using the **Windows Forms** (WinForms) framework for a lightweight desktop experience."
       ]
     }
   }

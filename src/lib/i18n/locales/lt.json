@@ -104,5 +104,141 @@
         "Dirbau Agile komandoje, naudojau Git versijų kontrolę, dalyvavau sprintų planavime bei kasdieniuose susitikimuose."
       ]
     }
+  },
+  "projects": {
+    "lutra-ledger": {
+      "description": "Greita ir efektyvi darbalaukio programa, sukurta įmonei UAB Lutra, skirta automatizuoti tvarkingų PDF dokumentų generavimą.",
+      "content": [
+        "# Apžvalga",
+        "Lutra Ledger palengvina administracinius procesus – sudėtingi paslaugų duomenys ir klientų informacija automatiškai paverčiami į tvarkingas, spausdinimui paruoštas ataskaitas.",
+        "## Pagrindinės funkcijos",
+        "- **Automatinis PDF kūrimas**: Pagal pasirinktus parametrus sugeneruojami aiškios struktūros dokumentai su vienodu profesionaliu dizainu.",
+        "- **Duomenų saugojimas**: Visa klientų ir paslaugų informacija laikoma lokaliai, todėl sistema veikia ir be interneto.",
+        "- **Paieška ir automatinis užpildymas**: Greitai randamos paslaugos, sumažinamas rankinio įvedimo kiekis ir klaidų tikimybė.",
+        "## Technologijos",
+        "- Vartotojo sąsaja sukurta naudojant Svelte ir TypeScript.",
+        "- Programa veikia kaip darbalaukio aplikacija su Tauri ir Rust.",
+        "- Rust užtikrina greitą veikimą ir mažą programos dydį.",
+        "- Duomenys saugomi naudojant lengvą SQLite duomenų bazę."
+      ]
+    },
+    "rhythmic": {
+      "description": "Programa muzikos bibliotekoms valdyti ir sinchronizuoti tarp skirtingų platformų, tokių kaip Spotify, YouTube ir SoundCloud.",
+      "content": [
+        "# Apžvalga",
+        "Rhythmic sprendžia muzikos išskaidymo problemą, leisdama vienoje vietoje valdyti grojaraščius iš skirtingų platformų.",
+        "## Pagrindinės galimybės",
+        "- **Sinchronizavimas tarp platformų**: Lengvai perkelkite grojaraščius iš vienos platformos į kitą.",
+        "- **Versijų istorija**: Sekite grojaraščių pakeitimus ir, jei reikia, grįžkite prie ankstesnių versijų.",
+        "- **Tvarkymas**: Aptinka pasikartojančias dainas ir padeda suskirstyti per didelius grojaraščius.",
+        "## Techninė pusė",
+        "- Vartotojo sąsaja sukurta su React ir TypeScript.",
+        "- Serverio dalis veikia su .NET ir Web API.",
+        "- Naudojama MySQL duomenų bazė.",
+        "- Prisijungimas vykdomas per saugų OAuth mechanizmą."
+      ]
+    },
+    "blaze-website": {
+      "description": "Greita internetinė platforma Blaze.lt projektui su realaus laiko Minecraft serverio duomenimis ir automatizuotais mokėjimais.",
+      "content": [
+        "# Apžvalga",
+        "Blaze.lt sujungia svetainę su žaidimo serveriu, leidžiant realiu laiku matyti žaidėjų informaciją ir serverio būseną.",
+        "## Integracijos",
+        "- **Minecraft duomenys realiu laiku**: Svetainė tiesiogiai bendrauja su serveriu ir rodo naujausią informaciją.",
+        "- **Mokėjimai**: Integruota Paysera sistema pirkimams ir paramai.",
+        "- **Gyvi atnaujinimai**: Informacija atsinaujina automatiškai be puslapio perkrovimo.",
+        "## Technologijos",
+        "- Sukurta naudojant Svelte.",
+        "- Duomenų valdymui naudojamas Drizzle ORM.",
+        "- Dizainas sukurtas su Tailwind CSS, pritaikytas žaidimų bendruomenei."
+      ]
+    },
+    "shorty": {
+      "description": "Paprasta ir lengva URL trumpinimo sistema.",
+      "content": [
+        "# Apžvalga",
+        "Shorty leidžia ilgus interneto adresus paversti trumpais ir patogiais dalintis.",
+        "## Funkcijos",
+        "- Greitas nuorodų kūrimas ir nukreipimas.",
+        "- Duomenys saugomi SQL duomenų bazėje.",
+        "- Minimalus sudėtingumas – naudojamos tik pagrindinės kalbos galimybės."
+      ]
+    },
+    "timitis": {
+      "description": "Išplėstinė projektų valdymo sistema su skirtingais prieigos lygiais darbuotojams ir klientams.",
+      "content": [
+        "# Apžvalga",
+        "Sistema leidžia vienoje vietoje valdyti projektus, užduotis ir bendravimą su klientais.",
+        "## Prieigos lygiai",
+        "- **Administratorius/Vadovas**: Valdo vartotojus, projektus ir įmones.",
+        "- **Darbuotojas**: Stebi užduotis, žymi darbo laiką ir bendrauja komandoje.",
+        "- **Klientas**: Gali matyti projekto eigą ir teikti pastabas.",
+        "## Technologijos",
+        "- Backend sukurtas su Spring Boot.",
+        "- Frontend – React su TypeScript.",
+        "- Sudėtinga duomenų struktūra užtikrina duomenų vientisumą.",
+        "- Sistemos nustatymai gali būti keičiami realiu laiku."
+      ]
+    },
+    "worsetagram": {
+      "description": "Android programėlė, primenanti Instagram, sukurta mokymosi tikslais.",
+      "content": [
+        "# Apžvalga",
+        "Worsetagram atkuria pagrindines socialinio tinklo funkcijas – nuo nuotraukų įkėlimo iki bendravimo žinutėmis.",
+        "## Funkcijos",
+        "- **Turinio dalinimasis**: Nuotraukos, komentarai ir patiktukai.",
+        "- **Žinutės**: Realus bendravimas tarp vartotojų.",
+        "- **Paieška ir profilis**: Vartotojų paieška ir paskyros valdymas.",
+        "## Technologijos",
+        "- Naudojamas modernus Android UI sprendimas.",
+        "- Aiški projekto struktūra (duomenys, logika, sąsaja).",
+        "- Firebase naudojamas autentifikacijai ir duomenims.",
+        "- Kodas laikomas tvarkingas naudojant formatavimo įrankius."
+      ]
+    },
+    "purrislav": {
+      "description": "Discord botas, automatizuojantis bendruomenės veiklą.",
+      "content": [
+        "# Apžvalga",
+        "Purrislav sukurtas veikti stabiliai ir naudoti mažai resursų.",
+        "## Funkcijos",
+        "- **Gimtadieniai**: Automatiniai priminimai apie narių gimtadienius.",
+        "- **Spalvotos rolės**: Vartotojai gali kurti savo roles.",
+        "- **Komandos**: Patogus valdymas per Discord komandų sistemą.",
+        "## Technologijos",
+        "- Sukurtas naudojant Rust.",
+        "- Duomenys saugomi SQLite.",
+        "- Naudojamas įrankis duomenų valdymui ir migracijoms."
+      ]
+    },
+    "blackjack": {
+      "description": "Naršyklinis Blackjack žaidimas.",
+      "content": [
+        "# Apžvalga",
+        "Žaidimas leidžia žaisti Blackjack tiesiog naršyklėje be papildomų įrankių.",
+        "## Žaidimo taisyklės",
+        "- Kortos turi standartines reikšmes, tūzai gali būti 11.",
+        "- Tikslas – surinkti kuo arčiau 21.",
+        "- Kompiuteris veikia kaip dalintojas.",
+        "## Išskirtinumai",
+        "- Modernus stiklo efekto dizainas.",
+        "- Sukurtas tik su HTML, CSS ir JavaScript."
+      ]
+    },
+    "sortvisualizer": {
+      "description": "Programa, padedanti suprasti rūšiavimo algoritmus vizualiai.",
+      "content": [
+        "# Apžvalga",
+        "SortVisualizer parodo, kaip veikia skirtingi rūšiavimo algoritmai.",
+        "## Algoritmai",
+        "- Greiti algoritmai: Merge, Quick, Heap.",
+        "- Paprasti: Bubble, Selection, Insertion.",
+        "- Kiti: Gnome, Pancake.",
+        "## Funkcijos",
+        "- Rodo vykdymo laiką.",
+        "- Leidžia stebėti kiekvieną žingsnį.",
+        "- Veikia greitai kaip darbalaukio programa."
+      ]
+    }
   }
 }
