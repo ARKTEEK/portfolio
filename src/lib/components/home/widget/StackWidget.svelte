@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { _ } from "svelte-i18n";
   import WidgetCard from "./WidgetCard.svelte";
 
   let { categories = {} }: { categories: Record<string, string[]> } = $props();
 </script>
 
-<WidgetCard title="stack">
+<WidgetCard title={$_("widgets.stack.label")}>
   <div class="flex flex-col divide-y divide-subtle">
     {#each Object.entries(categories) as [name, tags]}
       <div class="py-2.5 first:pt-0 last:pb-0 flex flex-col gap-1.5">

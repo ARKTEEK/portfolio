@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "home": "Atrasti",
+    "projects": "Projektai",
+    "experience": "Patirtis",
+    "services": "Paslaugos"
+  },
+  "common": {
+    "loading": "Kraunama..."
+  },
+  "sections": {
+    "featured_projects": "Prisegti projektai",
+    "widgets": "Valdikliai",
+    "commits": "Kodo atnaujinimai"
+  },
+  "hero": {
+    "greeting": "Labas, aš",
+    "name": "Mindaugas.",
+    "role": "Full-stack programuotojas iš",
+    "bio": "Kuriu patikimas verslo logikos sistemas su .NET bei Java ir modernias vartotojo sąsajas su Svelte bei React.",
+    "based_in": "Kauno, Lietuva",
+    "resume": "Gyvenimo aprašymas",
+    "resume_en": "Anglų k.",
+    "resume_lt": "Lietuvių k."
+  },
+  "project_card": {
+    "view_source": "KODAS",
+    "private_source": "PRIVATUS",
+    "window_path": "projektai"
+  },
+  "widgets": {
+    "location": {
+      "label": "Lokacija"
+    },
+    "stack": {
+      "label": "Technologijos"
+    },
+    "uptime": {
+      "label": "Veikimo laikas",
+      "session_uptime": "SESIJA AKTYVI",
+      "systems_status": "Visos sistemos veikia"
+    },
+    "commits": {
+      "label": "Paskutiniai pakeitimai",
+      "link": "[info] Peržiūrėti",
+      "empty": "Naujų kodo pokyčių nerasta.",
+      "rate_limit": "Viršytas GitHub API užklausų limitas. Bandykite vėliau."
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Mindaugas – Full-stack programuotojas"
+    },
+    "projects": {
+      "path": "projektai",
+      "title": "Visi projektai",
+      "description": "Pilnas mano darbų sąrašas: nuo asmeninių eksperimentų iki klientams sukurtų sprendimų.",
+      "labels": {
+        "pinned": "SVARBIAUSI_PROJEKTAI",
+        "all": "VISI_PROJEKTAI",
+        "filtered": "ATRINKTI_PROJEKTAI",
+        "filter": "FILTRUOTI_PAGAL_ŽYMĄ"
+      },
+      "filters": {
+        "clear_all": "[išvalyti_filtrus]",
+        "active": "aktyvūs",
+        "projects": "projektai",
+        "no_results": "// rezultatų_nėra",
+        "no_results_desc": "Nėra projektų, atitinkančių pasirinktus filtrus."
+      }
+    },
+    "experience": {
+      "path": "patirtis",
+      "title": "Darbo patirtis",
+      "description": "Mano profesinis kelias – vietos, kuriose dirbau, ir sistemos, prie kurių kūrimo prisidėjau.",
+      "view_website": "APLANKYTI_SVETAINĘ",
+      "window_path": "darbai"
+    },
+    "services": {
+      "path": "paslaugos",
+      "title": "Paslaugos",
+      "description": "Paslaugos, kurias teikiu: nuo tinklalapių kūrimo iki konsultacijų ir techninio palaikymo."
+    }
+  },
+  "experience": {
+    "ainera": {
+      "role": "Programinės įrangos inžinerijos praktikantas",
+      "period": "2025 m. rugsėjis – 2025 m. lapkritis",
+      "description": "Dirbau prie pilno ciklo žiniatinklio programų kūrimo ir optimizavimo pagal specifinius verslo poreikius.",
+      "highlights": [
+        "Kūriau adaptyvias ir į vartotoją orientuotas sąsajas, naudodamas modernias front-end technologijas.",
+        "Tiesiogiai bendravau su klientais, paversdamas jų verslo poreikius techninėmis specifikacijomis ir veikiančiomis funkcijomis.",
+        "Optimizavau esamas platformas siekdamas geresnio našumo, prieinamumo ir aukštesnių SEO reitingų."
+      ]
+    },
+    "timitis": {
+      "role": "Full-stack programuotojo praktikantas",
+      "period": "2024 m. spalis – 2025 m. sausis",
+      "description": "Prisidėjau prie IT paslaugų valdymo platformos kūrimo, užtikrindamas sklandų ryšį tarp klientų užklausų ir paslaugų teikimo.",
+      "highlights": [
+        "Projektavau patikimą Full-stack architektūrą naudodamas React (su TypeScript) ir Spring Boot (Java).",
+        "Kūriau saugius RESTful API sklandžiam duomenų apsikeitimui tarp kliento ir serverio.",
+        "Modeliavau reliacines duomenų bazes, užtikrindamas duomenų vientisumą ir greitą užklausų apdorojimą.",
+        "Dirbau Agile komandoje, naudojau Git versijų kontrolę, dalyvavau sprintų planavime bei kasdieniuose susitikimuose."
+      ]
+    }
+  }
+}

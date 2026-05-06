@@ -30,6 +30,7 @@
 	},
 	"dependencies": {
 		"@tabler/icons-svelte": "^3.41.1",
-		"leaflet": "^1.9.4"
+		"leaflet": "^1.9.4",
+		"svelte-i18n": "^4.0.1"
 	}
 }

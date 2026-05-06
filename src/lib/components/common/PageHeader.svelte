@@ -1,15 +1,32 @@
 <script lang="ts">
-  let { path, title, description } = $props<{
+  let {
+    path,
+    title,
+    description,
+    backUrl = "",
+  } = $props<{
     path: string;
     title: string;
     description: string;
+    backUrl?: string;
   }>();
 </script>
 
 <header class="mb-10">
-  <p class="text-xs font-mono text-accent/60 tracking-widest uppercase mb-2">
-    ~/{path}
-  </p>
+  <div class="flex items-center justify-between mb-2">
+    <p class="text-xs font-mono text-accent/60 tracking-widest uppercase">
+      ~/{path}
+    </p>
+
+    {#if backUrl}
+      <a
+        href={backUrl}
+        class="text-2xs font-mono text-dim hover:text-accent transition-colors flex items-center gap-1.5">
+        [ cd .. ]
+      </a>
+    {/if}
+  </div>
+
   <h1 class="text-2xl font-bold text-hi tracking-tight mb-3">{title}</h1>
   <p class="text-sm text-lo leading-relaxed max-w-xl mb-6">{description}</p>
 </header>

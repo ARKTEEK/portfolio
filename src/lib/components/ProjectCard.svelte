@@ -1,17 +1,33 @@
 <script lang="ts">
   import { base } from "$app/paths";
   import type { Project } from "$lib/types";
+  import { _, locale } from "svelte-i18n";
   import TerminalCard from "./common/TerminalCard.svelte";
 
   let { project }: { project: Project } = $props();
-  const thumbnailPath = $derived(project.thumbnail);
 
+  const projectLink = $derived(
+    `${base}/${$locale ?? "en"}/projects/${project.slug}`,
+  );
+
+  const description = $derived.by(() => {
+    const translationKey = `projects.${project.slug}.description`;
+    const translated = $_(translationKey);
+
+    if (translated !== translationKey) {
+      return translated;
+    }
+
+    return project.description ?? "";
+  });
+
+  const thumbnailPath = $derived(project.thumbnail);
   const hasSource = $derived(!!project.link && project.link !== "");
 </script>
 
-<a href="{base}/projects/{project.slug}" class="block no-underline">
+<a href={projectLink} class="block no-underline">
   <TerminalCard
-    path="~/projects/{project.slug}"
+    path="~/{$_('project_card.window_path')}/{project.slug}"
     class="flex h-full cursor-pointer flex-col overflow-hidden">
     {#snippet ribbonRight()}
       {#if hasSource}
@@ -20,11 +36,11 @@
           target="_blank"
           onclick={(e) => e.stopPropagation()}
           class="font-mono text-2xs tracking-widest text-accent no-underline opacity-70 transition-opacity hover:opacity-100">
-          [ VIEW_SOURCE ]
+          [ {$_("project_card.view_source")} ]
         </a>
       {:else}
         <span class="font-mono text-2xs text-accent/40 cursor-not-allowed">
-          [ PRIVATE_REPO ]
+          [ {$_("project_card.private_source")} ]
         </span>
       {/if}
     {/snippet}
@@ -48,14 +64,16 @@
         </span>
       </div>
     {/if}
+
     <div class="flex min-h-0 flex-1 flex-col p-4">
       <h3
         class="text-hi group-hover:text-accent mb-1.5 font-bold leading-snug transition-colors">
         {project.title}
       </h3>
       <p class="text-lo mb-3 flex-1 text-sm leading-relaxed">
-        {project.description}
+        {description}
       </p>
+
       {#if project.tags?.length}
         <div class="flex flex-wrap gap-1.5">
           {#each project.tags.slice(0, 5) as tag}

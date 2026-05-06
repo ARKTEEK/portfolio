@@ -1,12 +1,6 @@
-import { browser } from '$app/environment';
-import { writable } from 'svelte/store';
+import { LOCALES } from '$lib/i18n';
+import type { ParamMatcher } from '@sveltejs/kit';
 
-export type Locale = 'en' | 'lt';
-
-const initialLocale = (browser ? (localStorage.getItem('locale') as Locale) : 'en') || 'en';
-
-export const locale = writable<Locale>(initialLocale);
-
-locale.subscribe((value) => {
-  if (browser) localStorage.setItem('locale', value);
-});
+export const match: ParamMatcher = (param) => {
+  return (LOCALES as readonly string[]).includes(param);
+};

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { _ } from "svelte-i18n";
   import MapWidget from "./MapWidget.svelte";
   import WidgetCard from "./WidgetCard.svelte";
 
@@ -20,7 +21,7 @@
   });
 </script>
 
-<WidgetCard title="location">
+<WidgetCard title={$_("widgets.location.label")}>
   <div
     class="flex-1 rounded-xl overflow-hidden relative border border-white/5 min-h-26">
     <MapWidget />

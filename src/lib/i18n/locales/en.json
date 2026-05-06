@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Explore",
+    "projects": "Projects",
+    "experience": "Experience",
+    "services": "Services"
+  },
+  "common": {
+    "loading": "Loading..."
+  },
+  "sections": {
+    "featured_projects": "Featured projects",
+    "widgets": "Widgets",
+    "commits": "Commits"
+  },
+  "hero": {
+    "greeting": "Hey, I'm",
+    "name": "Mindaugas",
+    "role": "A Full-Stack Developer from",
+    "bio": "I build reliable backends using .NET, Java and sharp UI using Svelte and React.",
+    "based_in": "Lithuania, Kaunas",
+    "resume": "Resume",
+    "resume_en": "English",
+    "resume_lt": "Lithuanian"
+  },
+  "project_card": {
+    "view_source": "VIEW_SOURCE",
+    "private_source": "PRIVATE_SOURCE",
+    "window_path": "projects"
+  },
+  "widgets": {
+    "location": {
+      "label": "Location"
+    },
+    "stack": {
+      "label": "Stack"
+    },
+    "uptime": {
+      "label": "Uptime",
+      "session_uptime": "SESSION ACTIVE",
+      "systems_status": "All Systems Running"
+    },
+    "commits": {
+      "label": "Recent Commits",
+      "link": "[info] View",
+      "empty": "No recent code pushes found.",
+      "rate_limit": "GitHub API rate limit exceeded. Please try again later."
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Mindaugas - Full-Stack Developer"
+    },
+    "projects": {
+      "path": "projects",
+      "title": "All Projects",
+      "description": "A full list of things I've built - personal projects, client work and other types of projects.",
+      "labels": {
+        "pinned": "PINNED_PROJECTS",
+        "all": "ALL_PROJECTS",
+        "filtered": "FILTERED_PROJECTS",
+        "filter": "FILTER_BY_TAG"
+      },
+      "filters": {
+        "clear_all": "Clear all filters",
+        "active": "active",
+        "projects": "projects"
+      }
+    },
+    "experience": {
+      "path": "experience",
+      "title": "Work History",
+      "description": "A timeline of my professional experience - places I've worked and the systems I've helped build.",
+      "view_website": "VIEW_WEBSITE",
+      "window_path": "jobs"
+    },
+    "services": {
+      "path": "services",
+      "title": "Services",
+      "description": "A list of services I offer, including web development, consulting, and technical support."
+    }
+  },
+  "experience": {
+    "ainera": {
+      "role": "Software Engineering Intern",
+      "period": "September 2025 - November 2025",
+      "description": "Focused on the end-to-end development and optimization of web applications tailored to specific client business requirements.",
+      "highlights": [
+        "Developed responsive and user-centric web interfaces using modern frontend technologies to ensure a seamless user experience.",
+        "Collaborated directly with clients to translate business needs into technical specifications and functional web features.",
+        "Optimized existing web platforms for better performance, accessibility, and SEO rankings."
+      ]
+    },
+    "timitis": {
+      "role": "Full-Stack Developer Intern",
+      "period": "October 2024 - January 2025",
+      "description": "Contributed to the full-cycle development of an IT service order management platform, bridging the gap between client requests and service delivery.",
+      "highlights": [
+        "Engineered a robust Full-Stack architecture utilizing React with TypeScript for the frontend and Spring Boot (Java) for the backend.",
+        "Designed and implemented secure RESTful APIs to facilitate seamless CRUD operations and data flow between the client and server.",
+        "Architected relational database models to ensure data integrity and efficient querying for high-volume service requests.",
+        "Operated within an Agile environment, utilizing Git for version control and participating in sprint planning and daily stand-ups."
+      ]
+    }
+  },
+  "projects": {
+    "lutra-ledger": {
+      "description": "An application made for UAB Lutra that generates PDF documents based on selected services and user information.",
+      "content": [
+      ]
+    },
+    "rhythmic": {
+      "description": "An application that helps you manage music playlists across YouTube, Spotify, and SoundCloud in one place.",
+      "content": [
+      ]
+    },
+    "blaze-website": {
+      "description": "The official website for Blaze.lt, showcasing the company's services and portfolio.",
+      "content": [
+      ]
+    },
+    "shorty": {
+      "description": "A lightweight URL shortening service built with Go and SQL.",
+      "content": [
+      ]
+    },
+    "timitis": {
+      "description": "A full-cycle IT service order management platform bridging client requests and service delivery.",
+      "content": [
+      ]
+    },
+    "worsetagram": {
+      "description": "An Android clone of Instagram — deliberately worse, but functional.",
+      "content": [
+      ]
+    },
+    "purrislav": {
+      "description": "A Discord bot that sends birthday reminders to a specified channel.",
+      "content": [
+      ]
+    },
+    "blackjack": {
+      "description": "A browser-based Blackjack game built with JavaScript and HTML using Glassmorphism styling.",
+      "content": [
+      ]
+    },
+    "sortvisualizer": {
+      "description": "A real-time visualiser for sorting algorithms, built with ASP .NET and C#.",
+      "content": [
+      ]
+    }
+  }
+}

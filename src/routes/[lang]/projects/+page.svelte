@@ -4,6 +4,7 @@
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import { projects } from "$lib/data/projects";
   import type { ProjectType } from "$lib/types";
+  import { _ } from "svelte-i18n";
 
   const TAG_GROUPS: Record<string, string[]> = {
     ".NET": [".NET", "C#", "ASP.NET", "ASP .NET"],
@@ -92,18 +93,20 @@
 <svelte:head><title>Portfolio – Projects</title></svelte:head>
 
 <PageHeader
-  path="projects"
-  title="All Projects"
-  description="A full list of things I've built - personal tools, client work, and experiments." />
+  path={$_("pages.projects.path")}
+  title={$_("pages.projects.title")}
+  description={$_("pages.projects.description")} />
 
 <div class="mb-10 space-y-4">
   <div>
     <SectionHeader
-      title="filter_by_tag"
+      title={$_("pages.projects.labels.filter")}
       meta={selectedTags.length > 0
-        ? `${selectedTags.length} active`
+        ? `${selectedTags.length} ${$_("pages.projects.filters.active")}`
         : undefined}
-      action={selectedTags.length > 0 ? "[clear_all]" : undefined}
+      action={selectedTags.length > 0
+        ? $_("pages.projects.filters.clear_all")
+        : undefined}
       onaction={clearFilters} />
     <div class="flex flex-wrap gap-2">
       {#each allTags as tag}
@@ -123,7 +126,9 @@
 
 {#if pinnedProjects.length > 0 && !hasActiveFilters}
   <section class="mb-12">
-    <SectionHeader title="pinned" meta={pinnedProjects.length.toString()} />
+    <SectionHeader
+      title={$_("pages.projects.labels.pinned")}
+      meta={pinnedProjects.length.toString()} />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {#each pinnedProjects as project (project.id ?? project.title)}
         <ProjectCard {project} />
@@ -134,8 +139,12 @@
 
 <section>
   <SectionHeader
-    title={hasActiveFilters ? "filtered" : "all_projects"}
-    meta="{projects.filter((p) => !p.pinned).length} projects" />
+    title={hasActiveFilters
+      ? $_("pages.projects.labels.filtered")
+      : $_("pages.projects.labels.all")}
+    meta="{projects.filter((p) => !p.pinned).length} {$_(
+      'pages.projects.filters.projects',
+    )}" />
 
   {#if visibleProjects.length > 0}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -156,12 +165,16 @@
   {:else}
     <div
       class="border border-line bg-surface px-6 py-12 text-center rounded-xl">
-      <p class="text-xs font-mono text-dim mb-1">// no_results</p>
-      <p class="text-sm text-lo">No projects match the selected filters.</p>
+      <p class="text-xs font-mono text-dim mb-1">
+        {$_("pages.projects.filters.no_results")}
+      </p>
+      <p class="text-sm text-lo">
+        {$_("pages.projects.filters.no_results_desc")}
+      </p>
       <button
         onclick={clearFilters}
         class="mt-4 text-xs font-mono text-accent/70 hover:text-accent transition-colors cursor-pointer">
-        [clear_filters]
+        {$_("pages.projects.filters.clear_all")}
       </button>
     </div>
   {/if}

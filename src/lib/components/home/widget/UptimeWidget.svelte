@@ -1,5 +1,6 @@
 <script lang="ts">
-  import WidgetCard from "./WidgetCard.svelte";
+    import { _ } from "svelte-i18n";
+    import WidgetCard from "./WidgetCard.svelte";
 
   let uptimeStr = $state("00:00:00");
 
@@ -18,14 +19,14 @@
   });
 </script>
 
-<WidgetCard title="uptime">
+<WidgetCard title={$_("widgets.uptime.label")}>
   <div class="flex-1 flex flex-col items-center justify-center gap-1">
     <p
       class="font-mono text-2xl font-bold text-accent tabular-nums tracking-tight">
       {uptimeStr}
     </p>
     <p class="text-2xs text-dim font-mono uppercase tracking-wider">
-      session active
+      {$_("widgets.uptime.session_uptime")}
     </p>
   </div>
 
@@ -39,7 +40,7 @@
       </span>
     </span>
     <span class="text-2xs font-mono text-accent font-medium">
-      All Systems Running
+      {$_("widgets.uptime.systems_status")}
     </span>
   </div>
 </WidgetCard>

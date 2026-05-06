@@ -6,6 +6,7 @@
   import StatsGrid from "$lib/components/home/WidgetsGrid.svelte";
   import CommitList from "$lib/components/home/commit/CommitList.svelte";
   import { projects } from "$lib/data/projects";
+  import { _ } from "svelte-i18n";
 
   const pinnedProjects = projects.filter((p) => p.pinned);
   const techTags = [
@@ -21,13 +22,13 @@
 </script>
 
 <svelte:head>
-  <title>Mindaugas - Full-Stack Developer</title>
+  <title>{$_("pages.home.title")}</title>
 </svelte:head>
 
 <Hero />
 
 <section class="mb-10">
-  <SectionHeader title="featured_projects" href="{base}/projects" />
+  <SectionHeader title={$_("sections.featured_projects")} href="{base}/projects" />
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {#each pinnedProjects as project}
       <ProjectCard {project} />
@@ -36,11 +37,11 @@
 </section>
 
 <section class="mb-10">
-  <SectionHeader title="widgets" meta="stats" />
+  <SectionHeader title={$_("sections.widgets")} meta="stats" />
   <StatsGrid {techTags} />
 </section>
 
 <section class="mb-10">
-  <SectionHeader title="commits" meta="git log" />
+  <SectionHeader title={$_("sections.commits")} meta="git log" />
   <CommitList />
 </section>

@@ -1,5 +1,5 @@
 export interface NavItem {
-  label: string;
+  id: string;
   href: string;
 }
 
@@ -31,6 +31,7 @@ export interface Commit {
 }
 
 export interface Experience {
+  id: string;
   company: string;
   role: string;
   period: string;

@@ -1,16 +1,42 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
   import { base } from "$app/paths";
   import { page } from "$app/state";
   import { navItems } from "$lib/data/navigation";
-  import { locale } from "$lib/stores/locale";
+  import type { Locale } from "$lib/i18n";
+  import { _, locale } from "svelte-i18n";
+
+  function getLocalizedHref(path: string) {
+    const lang = $locale || "en";
+    const cleanPath = path.startsWith("/") ? path : `/${path}`;
+    return `${base}/${lang}${cleanPath === "/" ? "" : cleanPath}`;
+  }
+
+  function switchLocale(newLocale: Locale) {
+    if ($locale === newLocale) return;
+    const segments = page.url.pathname.split("/").filter(Boolean);
+    segments[0] = newLocale;
+    const newPath = `/${segments.join("/")}`;
+    goto(newPath);
+  }
+
+  function isPathActive(fullHref: string, isHome: boolean) {
+    const currentPath = page.url.pathname.replace(/\/$/, "");
+    const targetPath = fullHref.replace(/\/$/, "");
+
+    if (isHome) {
+      return currentPath === targetPath;
+    }
+    return currentPath.startsWith(targetPath);
+  }
 </script>
 
 <nav class="flex items-center pt-4 border-t border-subtle">
   {#each navItems as item, i}
-    {@const fullHref = item.href === "/" ? base || "/" : `${base}${item.href}`}
-    {@const isActive =
-      page.url.pathname === fullHref ||
-      (page.url.pathname.startsWith(fullHref) && fullHref !== (base || "/"))}
+    {@const fullHref = getLocalizedHref(item.href)}
+    {@const isActive = isPathActive(fullHref, item.href === "/")}
+    {@const label = $_(`nav.${item.id}`)}
+
     {#if i > 0}
       <span class="text-dim text-xs mx-2 select-none">/</span>
     {/if}
@@ -20,20 +46,31 @@
       aria-current={isActive ? "page" : undefined}
       class="text-xs font-semibold transition-colors duration-150
         {isActive ? 'text-accent' : 'text-dim hover:text-hi'}">
-      {isActive ? `[ ${item.label} ]` : item.label}
+      {isActive ? `[ ${label} ]` : label}
     </a>
   {/each}
+
   <div class="flex-1 border-t border-dashed border-line mx-3"></div>
-  <button
-    onclick={() => locale.set($locale === "en" ? "lt" : "en")}
-    class="text-xs font-semibold cursor-pointer transition-colors duration-150 select-none"
-    aria-label="Switch language">
-    <span class={$locale === "en" ? "text-accent" : "text-dim hover:text-hi"}>
+
+  <div class="flex gap-1">
+    <button
+      onclick={() => switchLocale("en")}
+      class="text-xs font-semibold cursor-pointer select-none {$locale === 'en'
+        ? 'text-accent cursor-not-allowed'
+        : 'text-dim hover:text-hi'}"
+      disabled={$locale === "en"}
+      aria-label="Switch to English">
       EN
-    </span>
-    <span class="text-dim mx-1">/</span>
-    <span class={$locale === "lt" ? "text-accent" : "text-dim hover:text-hi"}>
+    </button>
+    <span class="text-dim text-xs">/</span>
+    <button
+      onclick={() => switchLocale("lt")}
+      class="text-xs font-semibold cursor-pointer select-none {$locale === 'lt'
+        ? 'text-accent cursor-not-allowed'
+        : 'text-dim hover:text-hi'}"
+      disabled={$locale === "lt"}
+      aria-label="Switch to Lithuanian">
       LT
-    </span>
-  </button>
+    </button>
+  </div>
 </nav>

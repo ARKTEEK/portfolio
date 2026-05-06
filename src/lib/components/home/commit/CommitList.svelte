@@ -2,6 +2,7 @@
   import { getCommitStats, getRecentCommits } from "$lib/github";
   import type { Commit } from "$lib/types";
   import { onMount } from "svelte";
+  import { _ } from "svelte-i18n";
   import CommitItem from "./CommitItem.svelte";
 
   let commits = $state<Commit[]>([]);
@@ -38,29 +39,29 @@
 <section class="border border-line rounded-xl bg-surface overflow-hidden">
   <header
     class="flex items-center justify-between px-5 py-4 border-b border-subtle">
-    <p class="text-sm font-bold text-hi">Recent Commits</p>
+    <p class="text-sm font-bold text-hi">{$_("widgets.commits.label")}</p>
     <a
       href="https://github.com/{username}"
       target="_blank"
-      class="text-xs font-mono text-accent">[info] View ↗</a>
+      class="text-xs font-mono text-accent">{$_("widgets.commits.link")} ↗</a>
   </header>
 
   <div class="divide-y divide-subtle max-h-64 overflow-y-auto custom-scrollbar">
     {#if loading}
       <div
         class="px-5 py-8 text-center text-dim font-mono text-xs animate-pulse">
-        Loading...
+        {$_("common.loading")}
       </div>
     {:else if errorMessage}
       <div class="px-5 py-12 text-center">
         <p class="text-dim font-mono text-xs">
           {errorMessage === "EMPTY"
-            ? "No recent code pushes found."
+            ? $_("widgets.commits.empty")
             : errorMessage}
         </p>
         {#if errorMessage.includes("rate limit")}
           <p class="text-[10px] text-dim/50 font-mono mt-2 italic">
-            (GitHub limits unauthenticated requests to 60/hr)
+            {$_("widgets.commits.rate_limit")}
           </p>
         {/if}
       </div>

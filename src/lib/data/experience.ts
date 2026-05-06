@@ -2,10 +2,12 @@ import type { Experience } from '$lib/types';
 
 export const experiences: Experience[] = [
   {
+    id: 'ainera',
     company: 'Ainera',
     role: 'Software Engineering Intern',
     period: 'September 2025 - November 2025',
-    description: 'Focused on the end-to-end development and optimization of web applications tailored to specific client business requirements.',
+    description:
+      'Focused on the end-to-end development and optimization of web applications tailored to specific client business requirements.',
     highlights: [
       'Developed responsive and user-centric web interfaces using modern frontend technologies to ensure a seamless user experience.',
       'Collaborated directly with clients to translate business needs into technical specifications and functional web features.',
@@ -15,10 +17,12 @@ export const experiences: Experience[] = [
     website: 'https://ainera.lt',
   },
   {
+    id: 'timitis',
     company: 'MB Timitis',
     role: 'Full-Stack Developer Intern',
     period: 'October 2024 - January 2025',
-    description: 'Contributed to the full-cycle development of an IT service order management platform, bridging the gap between client requests and service delivery.',
+    description:
+      'Contributed to the full-cycle development of an IT service order management platform, bridging the gap between client requests and service delivery.',
     highlights: [
       'Engineered a robust Full-Stack architecture utilizing React with TypeScript for the frontend and Spring Boot (Java) for the backend.',
       'Designed and implemented secure RESTful APIs to facilitate seamless CRUD operations and data flow between the client and server.',
