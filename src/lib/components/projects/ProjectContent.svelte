@@ -15,15 +15,25 @@
 
   const blocks = $derived.by((): Block[] => {
     const result: Block[] = [];
-    for (const raw of contentLines) {
-      if (raw.startsWith("- ")) {
-        const text = raw.slice(2);
+
+    const lines = Array.isArray(contentLines) ? contentLines : [];
+
+    for (const raw of lines) {
+      const trimmed = raw.trim();
+      if (!trimmed) continue;
+
+      if (trimmed.startsWith("- ")) {
+        const text = trimmed.slice(2);
         const last = result[result.length - 1];
-        if (last?.kind === "ul") last.items.push(text);
-        else result.push({ kind: "ul", items: [text] });
+        if (last?.kind === "ul") {
+          last.items.push(text);
+        } else {
+          result.push({ kind: "ul", items: [text] });
+        }
       } else {
         let type: LineType = "p";
         let text = raw;
+
         if (raw.startsWith("### ")) {
           type = "h3";
           text = raw.slice(4);
@@ -37,6 +47,7 @@
           type = "blockquote";
           text = raw.slice(2);
         }
+
         result.push({ kind: "single", type: type as any, text });
       }
     }

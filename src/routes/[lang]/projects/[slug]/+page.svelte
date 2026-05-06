@@ -2,7 +2,7 @@
   import { base } from "$app/paths";
   import { page } from "$app/stores";
   import { projects } from "$lib/data/projects";
-  import { _, locale } from "svelte-i18n";
+  import { _, json, locale } from "svelte-i18n";
 
   import PageHeader from "$lib/components/common/PageHeader.svelte";
   import ProjectContent from "$lib/components/projects/ProjectContent.svelte";
@@ -12,11 +12,12 @@
   const project = projects.find((p) => p.slug === $page.params.slug);
 
   const contentLines = $derived.by(() => {
-    const key = `projects.${project?.slug}.content`;
-    const translated = $_(key);
-    return translated !== key && Array.isArray(translated)
-      ? translated
-      : (project?.content ?? []);
+    if (!project) return [];
+
+    const key = `projects.${project.slug}.content`;
+    const translated = $json(key);
+
+    return Array.isArray(translated) ? translated : (project.content ?? []);
   });
 
   const description = $derived(
