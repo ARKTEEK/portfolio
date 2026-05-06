@@ -107,46 +107,109 @@
     "lutra-ledger": {
       "description": "An application made for UAB Lutra that generates PDF documents based on selected services and user information.",
       "content": [
+        "# Overview",
+        "Lutra Ledger is a desktop application built for UAB Lutra. It takes chosen service details and user information and automatically generates clean, structured PDF documents.",
+        "## Features",
+        "- Select from a predefined list of services and auto-populate document fields.",
+        "- Generates ready-to-print PDF output using a consistent template.",
+        "- Stores client and service data locally using **SQLite** for offline-first operation.",
+        "- Built as a native desktop app with **Tauri + Rust**, keeping the binary lightweight."
       ]
     },
     "rhythmic": {
       "description": "An application that helps you manage music playlists across YouTube, Spotify, and SoundCloud in one place.",
       "content": [
+        "# Overview",
+        "Rhythmic lets you consolidate and control music playlists from multiple platforms without switching between apps.",
+        "## Features",
+        "- Integrated **three OAuth providers** (Google, Spotify, SoundCloud) for unified authentication.",
+        "- Playlist CRUD operations synced across services via a **.NET** backend.",
+        "- Frontend built in **React + TypeScript** with a responsive, minimal UI.",
+        "- **MySQL** schema designed to handle cross-platform playlist and track metadata."
       ]
     },
     "blaze-website": {
       "description": "The official website for Blaze.lt, showcasing the company's services and portfolio.",
       "content": [
+        "# Overview",
+        "A modern, user-friendly marketing site built for Blaze.lt to present their services, past work, and contact details.",
+        "## Stack",
+        "- Built with **Svelte** and **Tailwind CSS** for fast, maintainable frontend code.",
+        "- Dynamic content driven by a **MySQL** backend.",
+        "- Fully responsive and optimised for SEO and accessibility."
       ]
     },
     "shorty": {
       "description": "A lightweight URL shortening service built with Go and SQL.",
       "content": [
+        "# Overview",
+        "Shorty is a no-frills URL shortener that creates compact links for long URLs, making them easier to share.",
+        "## Features",
+        "- Create and resolve shortened URLs with low-latency **Go** HTTP handlers.",
+        "- Persistent storage backed by SQL with an indexed redirect table.",
+        "- Minimal dependency footprint — no frameworks, just the standard library."
       ]
     },
     "timitis": {
       "description": "A full-cycle IT service order management platform bridging client requests and service delivery.",
       "content": [
+        "# Overview",
+        "Built during an internship at Timitis, this platform manages the full lifecycle of IT service orders from submission to resolution.",
+        "## Architecture",
+        "- **React + TypeScript** frontend with a component-driven, type-safe UI.",
+        "- **Spring Boot (Java)** backend exposing secure RESTful APIs.",
+        "- Relational database schema designed for high-volume service request querying.",
+        "## Process",
+        "- Operated in an **Agile** environment with daily stand-ups and sprint planning.",
+        "- Version-controlled with Git across a multi-developer team."
       ]
     },
     "worsetagram": {
       "description": "An Android clone of Instagram — deliberately worse, but functional.",
       "content": [
+        "# Overview",
+        "A tongue-in-cheek Android app that replicates Instagram's core features in a deliberately rough way.",
+        "## Features",
+        "- Photo upload, user following, and a feed — all working, none polished.",
+        "- **.NET** backend handling auth and media storage.",
+        "- Local data persistence via **SQLite**."
       ]
     },
     "purrislav": {
       "description": "A Discord bot that sends birthday reminders to a specified channel.",
       "content": [
+        "# Overview",
+        "Purrislav tracks birthdays entered by server members and sends a notification to a configured channel on the day.",
+        "## Features",
+        "- Users register birthdays via slash commands.",
+        "- Daily cron-style check fires notifications at midnight in the server's timezone.",
+        "- Written in **Rust** for low resource usage — runs on a cheap VPS indefinitely.",
+        "- Stores all data in **SQLite** with no external dependencies."
       ]
     },
     "blackjack": {
       "description": "A browser-based Blackjack game built with JavaScript and HTML using Glassmorphism styling.",
       "content": [
+        "# Overview",
+        "A classic Blackjack implementation playable in the browser, styled with a Glassmorphism aesthetic.",
+        "## Features",
+        "- Full game loop: deal, hit, stand, bust, and win detection.",
+        "- Virtual dealer with basic AI behaviour.",
+        "- Pure **JavaScript + HTML/CSS** — zero dependencies."
       ]
     },
     "sortvisualizer": {
       "description": "A real-time visualiser for sorting algorithms, built with ASP .NET and C#.",
       "content": [
+        "# Overview",
+        "SortVisualizer renders sorting algorithms step-by-step so you can watch them work in real time.",
+        "## Supported Algorithms",
+        "- Bubble Sort, Selection Sort, Insertion Sort",
+        "- Merge Sort, Quick Sort",
+        "## Features",
+        "- Adjustable array size and animation speed.",
+        "- Step counter and comparison tracker shown live.",
+        "- Built on **ASP .NET** with a lightweight **C#** backend serving the visualiser state."
       ]
     }
   }

@@ -8,16 +8,17 @@ export type ProjectType = "open-source" | "client";
 export interface Project {
   id: number;
   title: string;
-  description: string;
-  tags: string[];
+  slug: string;
+  tags?: string[];
   link?: string;
   images?: string[];
-  thumbnail?: string;
   video?: string;
-  pinned: boolean;
-  type: ProjectType;
-  slug: string;
+  thumbnail?: string;
+  pinned?: boolean;
+  type?: ProjectType;
+  description?: string;
   content?: string[];
+  website?: string;
 }
 
 export interface Commit {
