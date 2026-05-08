@@ -142,9 +142,7 @@
     title={hasActiveFilters
       ? $_("pages.projects.labels.filtered")
       : $_("pages.projects.labels.all")}
-    meta="{projects.filter((p) => !p.pinned).length} {$_(
-      'pages.projects.filters.projects',
-    )}" />
+    meta={projects.filter((p) => !p.pinned).length.toString()} />
 
   {#if visibleProjects.length > 0}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">

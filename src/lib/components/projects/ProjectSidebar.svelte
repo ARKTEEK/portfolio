@@ -58,7 +58,7 @@
             [ VIEW_SOURCE ]
           </a>
         {:else}
-          <span class="text-xs font-mono text-dim/40 italic">
+          <span class="font-mono text-xs text-accent/40 cursor-not-allowed">
             [ PRIVATE_SOURCE ]
           </span>
         {/if}
