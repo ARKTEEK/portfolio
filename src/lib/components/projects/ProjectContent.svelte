@@ -15,13 +15,10 @@
 
   const blocks = $derived.by((): Block[] => {
     const result: Block[] = [];
-
     const lines = Array.isArray(contentLines) ? contentLines : [];
-
     for (const raw of lines) {
       const trimmed = raw.trim();
       if (!trimmed) continue;
-
       if (trimmed.startsWith("- ")) {
         const text = trimmed.slice(2);
         const last = result[result.length - 1];
@@ -33,7 +30,6 @@
       } else {
         let type: LineType = "p";
         let text = raw;
-
         if (raw.startsWith("### ")) {
           type = "h3";
           text = raw.slice(4);
@@ -47,7 +43,6 @@
           type = "blockquote";
           text = raw.slice(2);
         }
-
         result.push({ kind: "single", type: type as any, text });
       }
     }
@@ -58,35 +53,40 @@
 <article class="md:col-span-8 prose-custom font-sans">
   {#each blocks as block}
     {#if block.kind === "ul"}
-      <ul class="my-6 space-y-4">
+      <ul class="my-4 md:my-6 space-y-3 md:space-y-4">
         {#each block.items as item}
-          <li class="flex gap-4 text-lo/90 leading-relaxed text-lg">
-            <span class="text-accent mt-2 leading-none text-xs">■</span>
+          <li
+            class="flex gap-3 md:gap-4 text-lo/90 leading-relaxed text-base md:text-lg">
+            <span
+              class="text-accent mt-1.5 md:mt-2 leading-none text-xs shrink-0">
+              ■
+            </span>
             <span>{@html fmt(item)}</span>
           </li>
         {/each}
       </ul>
     {:else if block.type === "h1"}
-      <h1 class="text-3xl font-bold text-hi mt-12 mb-6 first:mt-0">
+      <h1
+        class="text-2xl md:text-3xl font-bold text-hi mt-8 md:mt-12 mb-4 md:mb-6 first:mt-0">
         {@html fmt(block.text)}
       </h1>
     {:else if block.type === "h2"}
       <h2
-        class="text-xl font-semibold text-hi mt-12 mb-6 border-b border-line pb-2">
+        class="text-lg md:text-xl font-semibold text-hi mt-8 md:mt-12 mb-4 md:mb-6 border-b border-line pb-2">
         {@html fmt(block.text)}
       </h2>
     {:else if block.type === "h3"}
       <h3
-        class="text-sm font-mono text-accent uppercase tracking-[0.3em] mt-10 mb-4">
+        class="text-sm font-mono text-accent uppercase tracking-[0.3em] mt-8 md:mt-10 mb-3 md:mb-4">
         {@html fmt(block.text)}
       </h3>
     {:else if block.type === "blockquote"}
       <blockquote
-        class="border-l-2 border-accent/40 pl-6 py-1 my-10 text-dim italic bg-accent/5">
+        class="border-l-2 border-accent/40 pl-4 md:pl-6 py-1 my-6 md:my-10 text-dim italic bg-accent/5">
         {@html fmt(block.text)}
       </blockquote>
     {:else}
-      <p class="text-lo/80 leading-relaxed mb-6 text-lg">
+      <p class="text-lo/80 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
         {@html fmt(block.text)}
       </p>
     {/if}

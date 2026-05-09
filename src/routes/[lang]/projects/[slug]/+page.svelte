@@ -1,22 +1,19 @@
 <script lang="ts">
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-  import { projects } from "$lib/data/projects";
-  import { _, json, locale } from "svelte-i18n";
-
   import PageHeader from "$lib/components/common/PageHeader.svelte";
   import ProjectContent from "$lib/components/projects/ProjectContent.svelte";
   import ProjectMedia from "$lib/components/projects/ProjectMedia.svelte";
   import ProjectSidebar from "$lib/components/projects/ProjectSidebar.svelte";
+  import { projects } from "$lib/data/projects";
+  import { _, json, locale } from "svelte-i18n";
 
   const project = projects.find((p) => p.slug === $page.params.slug);
 
   const contentLines = $derived.by(() => {
     if (!project) return [];
-
     const key = `projects.${project.slug}.content`;
     const translated = $json(key);
-
     return Array.isArray(translated) ? translated : (project.content ?? []);
   });
 
@@ -28,7 +25,7 @@
 </script>
 
 {#if project}
-  <div class="max-w-6xl mx-auto px-4 pb-20">
+  <div class="max-w-6xl mx-auto px-3 sm:px-6 pb-12 md:pb-20">
     <PageHeader
       path="projects/{project.slug}"
       title={project.title}
@@ -37,7 +34,7 @@
 
     <ProjectMedia {project} />
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
       <ProjectContent {contentLines} />
       <ProjectSidebar {project} />
     </div>

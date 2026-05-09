@@ -23,7 +23,6 @@
   function isPathActive(fullHref: string, isHome: boolean) {
     const currentPath = page.url.pathname.replace(/\/$/, "");
     const targetPath = fullHref.replace(/\/$/, "");
-
     if (isHome) {
       return currentPath === targetPath;
     }
@@ -36,23 +35,27 @@
     {@const fullHref = getLocalizedHref(item.href)}
     {@const isActive = isPathActive(fullHref, item.href === "/")}
     {@const label = $_(`nav.${item.id}`)}
-
     {#if i > 0}
       <span class="text-dim text-xs mx-2 select-none">/</span>
     {/if}
-
     <a
       href={fullHref}
       aria-current={isActive ? "page" : undefined}
       class="text-xs font-semibold transition-colors duration-150
         {isActive ? 'text-accent' : 'text-dim hover:text-hi'}">
-      {isActive ? `[ ${label} ]` : label}
+      {#if isActive}
+        <span class="hidden sm:inline">[ {label} ]</span>
+        <span class="sm:hidden">[{label}]</span>
+      {:else}
+        {label}
+      {/if}
     </a>
   {/each}
 
-  <div class="flex-1 border-t border-dashed border-line mx-3"></div>
+  <div class="hidden sm:block flex-1 border-t border-dashed border-line mx-3">
+  </div>
 
-  <div class="flex gap-1">
+  <div class="flex gap-1 shrink-0 ml-auto sm:ml-0">
     <button
       onclick={() => switchLocale("en")}
       class="text-xs font-semibold cursor-pointer select-none {$locale === 'en'
