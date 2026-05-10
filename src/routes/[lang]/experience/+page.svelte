@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-  <title>{$_("pages.experience.title")}</title>
+  <title>{$_("pages.experience.page_title")}</title>
 </svelte:head>
 
 <PageHeader

@@ -69,11 +69,12 @@
   },
   "pages": {
     "home": {
-      "title": "Mindaugas - Full-Stack Developer"
+      "page_title": "Mindaugas - Full-Stack Developer"
     },
     "projects": {
       "path": "projects",
       "title": "All Projects",
+      "page_title": "Projects | Mindaugas - Full-Stack Developer",
       "description": "A full list of things I've built - personal projects, client work and other types of projects.",
       "labels": {
         "pinned": "PINNED_PROJECTS",
@@ -90,6 +91,7 @@
     "experience": {
       "path": "experience",
       "title": "Work History",
+      "page_title": "Experience | Mindaugas - Full-Stack Developer",
       "description": "A timeline of my professional experience - places I've worked and the systems I've helped build.",
       "view_website": "VIEW_WEBSITE",
       "window_path": "jobs",
@@ -101,6 +103,7 @@
     "services": {
       "path": "services",
       "title": "Services",
+      "page_title": "Services | Mindaugas - Full-Stack Developer",
       "description": "A list of services I offer, including web development, consulting, and technical support.",
       "sections": {
         "services": "services",

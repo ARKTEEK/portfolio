@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-  <title>Portfolio – {$_("pages.services.title")}</title>
+  <title>{$_("pages.services.page_title")}</title>
 </svelte:head>
 
 <PageHeader

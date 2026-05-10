@@ -24,6 +24,10 @@
   );
 </script>
 
+<svelte:head>
+  <title>{project?.title} | {$_("pages.home.page_title")}</title>
+</svelte:head>
+
 {#if project}
   <PageHeader
     path="projects/{project.slug}"

@@ -69,11 +69,12 @@
   },
   "pages": {
     "home": {
-      "title": "Mindaugas – Full-stack programuotojas"
+      "page_title": "Mindaugas - Full-Stack Programuotojas"
     },
     "projects": {
       "path": "projektai",
-      "title": "Visi projektai",
+      "title": "Projektai",
+      "page_title": "Projektai | Mindaugas - Full-Stack Programuotojas",
       "description": "Pilnas mano darbų sąrašas: nuo asmeninių eksperimentų iki klientams sukurtų sprendimų.",
       "labels": {
         "pinned": "SVARBIAUSI_PROJEKTAI",
@@ -91,7 +92,8 @@
     },
     "experience": {
       "path": "patirtis",
-      "title": "Darbo patirtis",
+      "title": "Patirtis",
+      "page_title": "Patirtis | Mindaugas - Full-Stack Programuotojas",
       "description": "Mano profesinis kelias – vietos, kuriose dirbau, ir sistemos, prie kurių kūrimo prisidėjau.",
       "view_website": "APLANKYTI_SVETAINĘ",
       "window_path": "darbai",
@@ -103,6 +105,7 @@
     "services": {
       "path": "paslaugos",
       "title": "Paslaugos",
+      "page_title": "Paslaugos | Mindaugas - Full-Stack Programuotojas",
       "description": "Siūlomos paslaugos: nuo programinės įrangos kūrimo iki konsultacijų ir techninio palaikymo.",
       "sections": {
         "services": "paslaugos",

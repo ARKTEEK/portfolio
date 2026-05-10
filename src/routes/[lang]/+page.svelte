@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-  <title>{$_("pages.home.title")}</title>
+  <title>{$_("pages.home.page_title")}</title>
 </svelte:head>
 
 <Hero />

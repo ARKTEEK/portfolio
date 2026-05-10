@@ -51,9 +51,7 @@
   );
 
   const visibleProjects = $derived(unpinnedFiltered.slice(0, visibleCount));
-
   const hasMore = $derived(visibleCount < unpinnedFiltered.length);
-
   const hasActiveFilters = $derived(
     selectedTags.length > 0 || selectedType !== "all",
   );
@@ -75,7 +73,6 @@
 
   $effect(() => {
     if (!observerTarget || !hasMore) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -84,13 +81,12 @@
       },
       { rootMargin: "200px" },
     );
-
     observer.observe(observerTarget);
     return () => observer.disconnect();
   });
 </script>
 
-<svelte:head><title>Portfolio – Projects</title></svelte:head>
+<svelte:head><title>{$_("pages.projects.page_title")}</title></svelte:head>
 
 <PageHeader
   path={$_("pages.projects.path")}
