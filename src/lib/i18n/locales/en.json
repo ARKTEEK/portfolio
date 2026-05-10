@@ -97,7 +97,50 @@
     "services": {
       "path": "services",
       "title": "Services",
-      "description": "A list of services I offer, including web development, consulting, and technical support."
+      "description": "A list of services I offer, including web development, consulting, and technical support.",
+      "sections": {
+        "services": "services",
+        "workflow": "workflow"
+      },
+      "services": {
+        "fullstack": {
+          "title": "Full-Stack Apps",
+          "description": "Modern web applications with scalable backends and responsive frontends."
+        },
+        "backend": {
+          "title": "Backend Systems",
+          "description": "REST APIs, authentication systems, integrations, and infrastructure."
+        },
+        "frontend": {
+          "title": "Frontend Engineering",
+          "description": "Fast, accessible, and maintainable interfaces with polished UX."
+        }
+      },
+      "meta": {
+        "services": "freelance",
+        "workflow": "pipeline"
+      },
+      "workflow": {
+        "discovery": "01. discovery()",
+        "architecture": "02. architecture()",
+        "development": "03. development()",
+        "deployment": "04. deployment()"
+      },
+      "engagement": {
+        "title": "engagement",
+        "description": "Available for full-time work, freelance projects, long-term collaboration, internal tools, and modernization work.",
+        "response_time": "response_time",
+        "project_status": "project_status",
+        "deployment": "deployment",
+        "accepting_work": "accepting_work",
+        "included": "included"
+      },
+      "cta": {
+        "status": "SYSTEM_STATUS = AVAILABLE_FOR_WORK;",
+        "title": "Building software that lasts.",
+        "description": "From backend architecture to polished frontend experiences, I focus on clean systems, maintainable codebases, and practical engineering decisions.",
+        "button": "./start-project"
+      }
     }
   },
   "experience": {

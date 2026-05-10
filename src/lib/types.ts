@@ -41,3 +41,9 @@ export interface Experience {
   tags: string[];
   website: string;
 }
+
+export interface Service {
+  id: string;
+  command: string;
+  stack: string[];
+}

@@ -99,7 +99,50 @@
     "services": {
       "path": "paslaugos",
       "title": "Paslaugos",
-      "description": "Paslaugos, kurias teikiu: nuo tinklalapių kūrimo iki konsultacijų ir techninio palaikymo."
+      "description": "Siūlomos paslaugos: nuo programinės įrangos kūrimo iki konsultacijų ir techninio palaikymo.",
+      "sections": {
+        "services": "paslaugos",
+        "workflow": "darbo eiga"
+      },
+      "services": {
+        "fullstack": {
+          "title": "Full-Stack Aplikacijos",
+          "description": "Šiuolaikinės žiniatinklio programos su didelėms apkrovoms paruošta architektūra ir prie bet kokio ekrano prisitaikančiu dizainu."
+        },
+        "backend": {
+          "title": "Backend Sistemos",
+          "description": "REST API kūrimas, autentifikavimo sistemos, integracijos ir infrastruktūros sprendimai."
+        },
+        "frontend": {
+          "title": "Frontend Sistemos",
+          "description": "Greitos, prieinamos ir lengvai prižiūrimos sąsajos su išdirbta vartotojo patirtimi (UX)."
+        }
+      },
+      "meta": {
+        "services": "laisvai_samdomas",
+        "workflow": "procesas"
+      },
+      "workflow": {
+        "discovery": "01. analizė()",
+        "architecture": "02. architektūra()",
+        "development": "03. kūrimas()",
+        "deployment": "04. diegimas()"
+      },
+      "engagement": {
+        "title": "bendradarbiavimas",
+        "description": "Esu atviras pilno etato darbui, laisvai samdomiems projektams, ilgalaikei partnerystei, vidinių įrankių programavimui bei sistemų modernizacijai.",
+        "response_time": "atsakymo_laikas",
+        "project_status": "statusas",
+        "deployment": "diegimas",
+        "accepting_work": "atviras_darbui",
+        "included": "įskaičiuota"
+      },
+      "cta": {
+        "status": "SISTEMOS_BŪSENA = LAISVAS_SAMDYMUI;",
+        "title": "Kuriu programinę įrangą, kuri tarnauja ilgai.",
+        "description": "Kuriu modernius, greitus ir tvarius programinės įrangos sprendimus, kurie auga kartu su jūsų poreikiais.",
+        "button": "./pradėti-projektą"
+      }
     }
   },
   "experience": {
