@@ -1,6 +1,6 @@
 <script lang="ts">
+  import AvailabilityWidget from "./widget/AvailabilityWidget.svelte";
   import LocationWidget from "./widget/LocationWidget.svelte";
-  import AvailabilityWidget from "./widget/PlaceholderWidget.svelte";
   import StackWidget from "./widget/StackWidget.svelte";
   import UptimeWidget from "./widget/UptimeWidget.svelte";
 

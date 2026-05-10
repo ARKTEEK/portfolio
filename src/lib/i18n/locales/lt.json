@@ -29,6 +29,26 @@
     "window_path": "projektai"
   },
   "widgets": {
+    "availability": {
+      "label": "Karjeros statusas",
+      "availability": {
+        "label": "prieinamumas",
+        "available": "ieškau darbo",
+        "unavailable": "šiuo metu užimtas"
+      },
+      "preference": {
+        "label": "prioritetas",
+        "text": "backend/fullstack"
+      },
+      "work_type": {
+        "label": "darbo_pobūdis",
+        "text": "hibridinis"
+      },
+      "response_time": {
+        "label": "atsakymo_laikas",
+        "text": "<24 val."
+      }
+    },
     "location": {
       "label": "Lokacija"
     },

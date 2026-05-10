@@ -29,6 +29,26 @@
     "window_path": "projects"
   },
   "widgets": {
+    "availability": {
+      "label": "Career Status",
+      "availability": {
+        "label": "availability",
+        "available": "open for work",
+        "unavailable": "Currently unavailable"
+      },
+      "preference": {
+        "label": "preferred",
+        "text": "backend/fullstack"
+      },
+      "work_type": {
+        "label": "work_type",
+        "text": "hybrid"
+      },
+      "response_time": {
+        "label": "response_time",
+        "text": "<24h"
+      }
+    },
     "location": {
       "label": "Location"
     },
