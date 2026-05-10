@@ -11,9 +11,9 @@ export const projects: Project[] = [
     title: "Lutra Ledger",
     tags: ["Svelte", "Tauri", "Rust", "SQLite"],
     link: "",
-    images: getProjectImages("lutra-ledger", 15),
+    images: getProjectImages("lutra-ledger", 9),
     thumbnail: `${base}/projects/lutra-ledger/thumbnail.png`,
-    video: "cywRMLKnf0Q",
+    video: "fs9QLUYGWd0",
     pinned: true,
     type: "client",
     slug: "lutra-ledger"
