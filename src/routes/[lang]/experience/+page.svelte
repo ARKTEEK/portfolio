@@ -14,17 +14,18 @@
   title={$_("pages.experience.title")}
   description={$_("pages.experience.description")} />
 
-<div class="max-w-3xl mx-auto py-12 px-6">
-  <div class="relative ml-4 pl-12">
-    <div class="absolute left-0 top-3 bottom-3 w-0.5 bg-accent/20 rounded-full">
-      <div class="absolute -top-1 -left-0.75 h-2 w-2 rounded-full bg-accent/40"></div>
-      <div class="absolute inset-0 bg-accent/10 blur-[1px]"></div>
-      <div class="absolute -bottom-1 -left-0.75 h-2 w-2 rounded-full bg-accent/40"></div>
+<div class="relative ml-4 pl-8 sm:pl-12">
+  <div class="absolute left-0 top-3 bottom-3 w-0.5 bg-accent/20 rounded-full">
+    <div class="absolute -top-1 -left-0.75 h-2 w-2 rounded-full bg-accent/40">
     </div>
-    <div class="flex flex-col gap-12">
-      {#each experiences as exp}
-        <ExperienceCard {exp} />
-      {/each}
+    <div class="absolute inset-0 bg-accent/10 blur-[1px]"></div>
+    <div
+      class="absolute -bottom-1 -left-0.75 h-2 w-2 rounded-full bg-accent/40">
     </div>
+  </div>
+  <div class="flex flex-col gap-8 sm:gap-12">
+    {#each experiences as exp}
+      <ExperienceCard {exp} />
+    {/each}
   </div>
 </div>

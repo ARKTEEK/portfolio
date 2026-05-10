@@ -25,19 +25,17 @@
 </script>
 
 {#if project}
-  <div class="max-w-6xl mx-auto px-3 sm:px-6 pb-12 md:pb-20">
-    <PageHeader
-      path="projects/{project.slug}"
-      title={project.title}
-      {description}
-      backUrl="{base}/{$locale}/projects" />
+  <PageHeader
+    path="projects/{project.slug}"
+    title={project.title}
+    {description}
+    backUrl="{base}/{$locale}/projects" />
 
-    <ProjectMedia {project} />
+  <ProjectMedia {project} />
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
-      <ProjectContent {contentLines} />
-      <ProjectSidebar {project} />
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+    <ProjectContent {contentLines} />
+    <ProjectSidebar {project} />
   </div>
 {:else}
   <div
