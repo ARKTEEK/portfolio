@@ -17,7 +17,7 @@
     "greeting": "Hey, I'm",
     "name": "Mindaugas",
     "role": "A Full-Stack Developer from",
-    "bio": "I build reliable backends using .NET, Java and sharp UI using Svelte and React.",
+    "bio": "I build reliable backends using .NET, Java and sharp UIs using Svelte and React.",
     "based_in": "Lithuania, Kaunas",
     "resume": "Resume",
     "resume_en": "English",
@@ -120,7 +120,7 @@
         },
         "frontend": {
           "title": "Frontend Engineering",
-          "description": "Fast, accessible, and maintainable interfaces with polished UX."
+          "description": "Fast, sharp, and maintainable interfaces with polished UX."
         }
       },
       "meta": {

@@ -17,7 +17,7 @@
     "greeting": "Labas, aš",
     "name": "Mindaugas.",
     "role": "Full-stack programuotojas iš",
-    "bio": "Kuriu patikimas verslo logikos sistemas su .NET bei Java ir modernias vartotojo sąsajas su Svelte bei React.",
+    "bio": "Kuriu patikimas verslo logikos sistemas su .NET, Java ir modernias vartotojo sąsajas su Svelte bei React.",
     "based_in": "Kauno, Lietuva",
     "resume": "Gyvenimo aprašymas",
     "resume_en": "Anglų k.",
@@ -122,7 +122,7 @@
         },
         "frontend": {
           "title": "Frontend Sistemos",
-          "description": "Greitos, prieinamos ir lengvai prižiūrimos sąsajos su išdirbta vartotojo patirtimi (UX)."
+          "description": "Greitos, modernios ir lengvai prižiūrimos naudotojo sąsajos (UX)."
         }
       },
       "meta": {
