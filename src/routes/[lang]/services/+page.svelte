@@ -33,20 +33,20 @@
       {@const description = $_(
         `pages.services.services.${service.id}.description`,
       )}
+
       <div
-        class="group rounded-xl border border-line bg-surface overflow-hidden transition-all hover:border-accent/20">
+        class="group flex flex-col rounded-xl border border-line bg-surface overflow-hidden transition-all hover:border-accent/20">
         <div
           class="border-b border-subtle px-4 py-3 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <span class="text-accent font-mono text-xs">❯</span>
-
             <h2 class="font-mono text-xs tracking-widest uppercase text-dim">
               {service.command}
             </h2>
           </div>
         </div>
 
-        <div class="p-5">
+        <div class="p-5 flex-1 flex flex-col">
           <h3 class="text-lg font-bold text-hi mb-2">
             {title}
           </h3>
@@ -55,7 +55,7 @@
             {description}
           </p>
 
-          <div class="flex flex-wrap gap-1.5">
+          <div class="flex flex-wrap gap-1.5 mt-auto">
             {#each service.stack as tag}
               <span
                 class="rounded border border-line px-2 py-0.5 font-mono text-2xs text-dim">
