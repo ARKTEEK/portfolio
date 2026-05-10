@@ -92,7 +92,11 @@
       "title": "Work History",
       "description": "A timeline of my professional experience - places I've worked and the systems I've helped build.",
       "view_website": "VIEW_WEBSITE",
-      "window_path": "jobs"
+      "window_path": "jobs",
+      "sections": {
+        "timeline": "career timeline",
+        "git": "git history"
+      }
     },
     "services": {
       "path": "services",
@@ -145,24 +149,27 @@
   },
   "experience": {
     "ainera": {
-      "role": "Software Engineering Intern",
+      "role": "Full-Stack Software Developer Intern",
       "period": "September 2025 - November 2025",
       "description": "Focused on the end-to-end development and optimization of web applications tailored to specific client business requirements.",
       "highlights": [
-        "Developed responsive and user-centric web interfaces using modern frontend technologies to ensure a seamless user experience.",
-        "Collaborated directly with clients to translate business needs into technical specifications and functional web features.",
-        "Optimized existing web platforms for better performance, accessibility, and SEO rankings."
+        "Developed and maintained multiple client websites using WordPress, PHP, and .NET",
+        "Customized website functionality, themes, and plugins to meet diverse client requirements",
+        "Implemented backend logic and database interactions using SQLite"
       ]
     },
     "timitis": {
-      "role": "Full-Stack Developer Intern",
+      "role": "Full-Stack Software Developer Intern",
       "period": "October 2024 - January 2025",
       "description": "Contributed to the full-cycle development of an IT service order management platform, bridging the gap between client requests and service delivery.",
       "highlights": [
-        "Engineered a robust Full-Stack architecture utilizing React with TypeScript for the frontend and Spring Boot (Java) for the backend.",
-        "Designed and implemented secure RESTful APIs to facilitate seamless CRUD operations and data flow between the client and server.",
-        "Architected relational database models to ensure data integrity and efficient querying for high-volume service requests.",
-        "Operated within an Agile environment, utilizing Git for version control and participating in sprint planning and daily stand-ups."
+        "Developed a full-stack IT service order management system using React (TypeScript) and Spring Boot",
+        "Designed and exposed RESTful APIs supporting full CRUD functionality",
+        "Modeled and optimized relational databases with Spring Data JPA / Hibernate",
+        "Secured application endpoints with Spring Security (JWT/session-based if applicable)",
+        "Implemented email notifications using Spring Mail",
+        "Reduced boilerplate and improved code readability with Lombok",
+        "Worked in an Agile (Scrum) team, managing code with Git"
       ]
     }
   },

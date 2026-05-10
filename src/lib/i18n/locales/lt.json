@@ -94,7 +94,11 @@
       "title": "Darbo patirtis",
       "description": "Mano profesinis kelias – vietos, kuriose dirbau, ir sistemos, prie kurių kūrimo prisidėjau.",
       "view_website": "APLANKYTI_SVETAINĘ",
-      "window_path": "darbai"
+      "window_path": "darbai",
+      "sections": {
+        "timeline": "profesinė istorija",
+        "git": "git istorija"
+      }
     },
     "services": {
       "path": "paslaugos",
@@ -147,24 +151,27 @@
   },
   "experience": {
     "ainera": {
-      "role": "Programinės įrangos inžinerijos praktikantas",
+      "role": "Full-Stack Programuotojas Praktikantas",
       "period": "2025 m. rugsėjis – 2025 m. lapkritis",
-      "description": "Dirbau prie pilno ciklo žiniatinklio programų kūrimo ir optimizavimo pagal specifinius verslo poreikius.",
+      "description": "Dirbau prie žiniatinklio programų kūrimo ir optimizavimo pagal specifinius klientų poreikius.",
       "highlights": [
-        "Kūriau adaptyvias ir į vartotoją orientuotas sąsajas, naudodamas modernias front-end technologijas.",
-        "Tiesiogiai bendravau su klientais, paversdamas jų verslo poreikius techninėmis specifikacijomis ir veikiančiomis funkcijomis.",
-        "Optimizavau esamas platformas siekdamas geresnio našumo, prieinamumo ir aukštesnių SEO reitingų."
+        "Kūriau ir prižiūrėjau klientų tinklalapius naudodamas WordPress, PHP ir .NET",
+        "Pritaikiau tinklalapiu˛ funkcionalumą, temas ir įskiepius pagal individualius klientų poreikius",
+        "Realizavau backend logiką ir sąveiką su duomenų bazėmis naudojant SQLite"
       ]
     },
     "timitis": {
-      "role": "Full-stack programuotojo praktikantas",
+      "role": "Full-Stack Programuotojo Praktikantas",
       "period": "2024 m. spalis – 2025 m. sausis",
       "description": "Prisidėjau prie IT paslaugų valdymo platformos kūrimo, užtikrindamas sklandų ryšį tarp klientų užklausų ir paslaugų teikimo.",
       "highlights": [
-        "Projektavau patikimą Full-stack architektūrą naudodamas React (su TypeScript) ir Spring Boot (Java).",
-        "Kūriau saugius RESTful API sklandžiam duomenų apsikeitimui tarp kliento ir serverio.",
-        "Modeliavau reliacines duomenų bazes, užtikrindamas duomenų vientisumą ir greitą užklausų apdorojimą.",
-        "Dirbau Agile komandoje, naudojau Git versijų kontrolę, dalyvavau sprintų planavime bei kasdieniuose susitikimuose."
+        "Sukūriau IT paslaugų užsakymų valdymo sistemą (ERP) naudojant React (TypeScript) ir Spring Boot",
+        "Suprojektavau ir realizavau RESTful API sąsajas su pilnu CRUD funkcionalumu",
+        "Modeliavau ir optimizavau reliacines duomenų bazes naudodamas Spring Data JPA / Hibernate",
+        "Užtikrinau programos prieigos taškų saugumą naudojant Spring Security (pagrįstą JWT/sesijomis)",
+        "Įgyvendinau pranešimų siuntimą el. paštu naudojant Spring Mail",
+        "Sumažinau pasikartojančio kodo kiekį ir pagerinau jo skaitomumą naudodamas Lombok",
+        "Dirbau Agile (Scrum) komandoje, valdžiau kodą naudodamas Git"
       ]
     }
   },

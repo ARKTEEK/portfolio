@@ -34,10 +34,6 @@ export interface Commit {
 export interface Experience {
   id: string;
   company: string;
-  role: string;
-  period: string;
-  description: string;
-  highlights: string[];
   tags: string[];
   website: string;
 }
