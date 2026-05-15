@@ -13,7 +13,7 @@ export const projects: Project[] = [
     link: "",
     images: getProjectImages("lutra-ledger", 9),
     thumbnail: `${base}/projects/lutra-ledger/thumbnail.png`,
-    video: "fs9QLUYGWd0",
+    videos: ["fs9QLUYGWd0"],
     pinned: true,
     type: "client",
     slug: "lutra-ledger"
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     tags: [".NET", "React", "MySQL", "Typescript"],
     link: "https://www.github.com/ARKTEEK/rhythmic",
     images: getProjectImages("rhythmic", 9),
-    video: "u5hVYthbdV8",
+    videos: ["u5hVYthbdV8"],
     thumbnail: `${base}/projects/rhythmic/thumbnail.png`,
     pinned: true,
     type: "open-source",
@@ -35,7 +35,8 @@ export const projects: Project[] = [
     title: "Blaze.lt Website",
     tags: ["Svelte", "Tailwind CSS", "MySQL", "Typescript"],
     link: "https://www.blaze.lt",
-    images: ["https://i.imgur.com/ugo3eGc.jpeg"],
+    images: getProjectImages("blaze-website", 7),
+    videos: ["P7VnVUkZnMA "],
     pinned: false,
     type: "client",
     thumbnail: `${base}/projects/blaze-website/thumbnail.png`,
@@ -57,6 +58,7 @@ export const projects: Project[] = [
     tags: ["Java", "Spring Boot", "React", "Typescript", "MySql"],
     pinned: false,
     type: "client",
+    videos: ["McqXzn5zG8w", "yl9qIP8mLWg", "dZudfP50lTg", "SuqMtAGpUt4", "bX--yZAIjJw", "btbZ6CXCuuY"],
     thumbnail: `${base}/projects/timitis/thumbnail.png`,
     slug: "timitis"
   },
@@ -65,6 +67,7 @@ export const projects: Project[] = [
     title: "Worsetagram",
     tags: [".NET", "Android", "SQLite"],
     link: "https://www.github.com/ARKTEEK/worsetagram",
+    videos: ["X-nB9Nsh9P4"],
     pinned: false,
     type: "open-source",
     slug: "worsetagram"
@@ -83,7 +86,7 @@ export const projects: Project[] = [
     title: "Blackjack",
     tags: ["Javascript", "HTML"],
     link: "https://www.github.com/ARKTEEK/blackjack",
-    video: "WUYlzi2kwiE",
+    videos: ["Y2e4vpo76Lk "],
     pinned: false,
     type: "open-source",
     slug: "blackjack"
@@ -92,7 +95,9 @@ export const projects: Project[] = [
     id: 9,
     title: "SortVisualizer",
     tags: ["ASP .NET", "C#"],
+    images: getProjectImages("sortvisualizer", 2),
     link: "https://www.github.com/ARKTEEK/sortvisualizer",
+    videos: ["40dJ35G8BGk"],
     pinned: false,
     type: "open-source",
     slug: "sortvisualizer"

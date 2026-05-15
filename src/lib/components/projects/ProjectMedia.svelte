@@ -8,8 +8,12 @@
   const mediaList = $derived.by(() => {
     const list: string[] = [];
 
-    if (project?.video) {
-      list.push(`vid:${project.video}`);
+    if (project?.videos && Array.isArray(project.videos)) {
+      project.videos.forEach((vid: string) => {
+        if (vid && vid.trim()) list.push(`vid:${vid.trim()}`);
+      });
+    } else if (project?.video) {
+      list.push(`vid:${project.video.trim()}`);
     }
 
     if (project?.images) {
