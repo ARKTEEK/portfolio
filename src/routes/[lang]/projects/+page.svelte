@@ -3,6 +3,7 @@
   import SectionHeader from "$lib/components/common/SectionHeader.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import { projects } from "$lib/data/projects";
+  import { groupTags } from "$lib/data/tagGroups";
   import type { ProjectType } from "$lib/types";
   import { _ } from "svelte-i18n";
 
@@ -36,9 +37,17 @@
     return (project.tags ?? []).some((t) => members.includes(t));
   }
 
-  const allTags = [
+  const rawUniqueTags = [
     ...new Set(projects.flatMap((p) => (p.tags ?? []).map(canonicalTag))),
-  ].sort();
+  ];
+
+  const categorizedFilters = $derived.by(() => {
+    const groups = groupTags(rawUniqueTags);
+    return groups.map((group, index) => ({
+      groupId: index,
+      tags: group,
+    }));
+  });
 
   const ITEMS_PER_BATCH = 6;
 
@@ -114,17 +123,38 @@
         ? $_("pages.projects.filters.clear_all")
         : undefined}
       onaction={clearFilters} />
-    <div class="flex flex-wrap gap-2">
-      {#each allTags as tag}
-        {@const active = selectedTags.includes(tag)}
-        <button
-          onclick={() => toggleTag(tag)}
-          class="px-2.5 py-1 text-xs font-mono border transition-all cursor-pointer rounded
-            {active
-            ? 'border-accent/10 bg-accent/5 text-accent/90'
-            : 'border-line text-dim bg-surface hover:border-accent/20 hover:text-lo'}">
-          {tag}
-        </button>
+
+    <div
+      class="flex flex-col gap-3 rounded-xl border border-line bg-surface/30 p-3">
+      {#each categorizedFilters as group}
+        <div class="grid grid-cols-[65px_1fr] items-baseline gap-3">
+          <span
+            class="text-xs font-mono text-dim/70 select-none uppercase tracking-widest leading-none pt-1">
+            {#if group.groupId === 0}
+              platform
+            {:else if group.groupId === 1}
+              backend
+            {:else if group.groupId === 2}
+              frontend
+            {:else}
+              misc
+            {/if}
+          </span>
+
+          <div class="flex flex-wrap gap-2">
+            {#each group.tags as tag}
+              {@const active = selectedTags.includes(tag)}
+              <button
+                onclick={() => toggleTag(tag)}
+                class="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono border transition-all cursor-pointer rounded select-none
+                  {active
+                  ? 'border-accent/40 bg-accent/5 text-hi shadow-sm'
+                  : 'border-line text-lo bg-surface hover:border-accent/30 hover:text-hi'}">
+                {tag}
+              </button>
+            {/each}
+          </div>
+        </div>
       {/each}
     </div>
   </div>
@@ -174,7 +204,8 @@
       </p>
       <p class="text-sm text-lo">
         {$_("pages.projects.filters.no_results_desc")}
-      </p><button
+      </p>
+      <button
         onclick={clearFilters}
         class="mt-4 text-xs font-mono text-accent/70 hover:text-accent transition-colors cursor-pointer">
         {$_("pages.projects.filters.clear_all")}

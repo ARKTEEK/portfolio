@@ -1,5 +1,10 @@
 <script lang="ts">
-  let { project } = $props<{ project: any }>();
+  import { groupTags } from "$lib/data/tagGroups";
+  import type { Project } from "$lib/types";
+
+  let { project } = $props<{ project: Project }>();
+
+  const sortedTagGroups = $derived(groupTags(project.tags ?? []));
 </script>
 
 <aside class="md:col-span-4">
@@ -12,11 +17,13 @@
         </span>
       </div>
       <div class="flex flex-wrap gap-2">
-        {#each project.tags as tag}
-          <span
-            class="px-2 py-1 text-2xs font-mono bg-surface border border-line text-dim">
-            {tag}
-          </span>
+        {#each sortedTagGroups as group}
+          {#each group as tag}
+            <span
+              class="inline-flex items-center gap-1.5 rounded border border-line bg-surface px-2 py-1 font-mono text-2xs text-lo transition-colors">
+              {tag}
+            </span>
+          {/each}
         {/each}
       </div>
     </div>
@@ -29,7 +36,7 @@
         </span>
       </div>
       <span
-        class="px-2 py-1 text-2xs font-mono bg-surface border border-line text-dim">
+        class="inline-block px-2 py-1 text-2xs font-mono bg-surface border border-line text-dim rounded">
         {project.type}
       </span>
     </div>

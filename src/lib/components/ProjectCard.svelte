@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
+  import { groupTags } from "$lib/data/tagGroups";
   import type { Project } from "$lib/types";
   import { _, locale } from "svelte-i18n";
   import TerminalCard from "./common/TerminalCard.svelte";
@@ -13,16 +14,26 @@
   const description = $derived.by(() => {
     const translationKey = `projects.${project.slug}.description`;
     const translated = $_(translationKey);
-
     if (translated !== translationKey) {
       return translated;
     }
-
     return project.description ?? "";
   });
 
   const thumbnailPath = $derived(project.thumbnail);
   const hasSource = $derived(!!project.link && project.link !== "");
+
+  const TAG_DISPLAY_LIMIT = 6;
+
+  const tagGroups = $derived.by(() => {
+    const all = project.tags ?? [];
+    const displayed = all.slice(0, TAG_DISPLAY_LIMIT);
+    return groupTags(displayed);
+  });
+
+  const overflowCount = $derived(
+    Math.max(0, (project.tags?.length ?? 0) - TAG_DISPLAY_LIMIT),
+  );
 </script>
 
 <a href={projectLink} class="block no-underline">
@@ -74,17 +85,20 @@
         {description}
       </p>
 
-      {#if project.tags?.length}
-        <div class="flex flex-wrap gap-1.5">
-          {#each project.tags.slice(0, 5) as tag}
-            <span
-              class="rounded border border-line px-2 py-0.5 font-mono text-2xs text-dim transition-colors group-hover:border-accent/20 group-hover:text-lo">
-              {tag}
-            </span>
+      {#if tagGroups.length}
+        <div class="flex flex-wrap items-center gap-1.5">
+          {#each tagGroups as group}
+            {#each group as tag}
+              <span
+                class="inline-flex items-center gap-1.5 rounded border border-line px-2 py-0.5 font-mono text-2xs text-lo transition-colors group-hover:border-accent/20">
+                {tag}
+              </span>
+            {/each}
           {/each}
-          {#if project.tags.length > 5}
-            <span class="text-dim/50 self-center font-mono text-2xs">
-              +{project.tags.length - 5}
+
+          {#if overflowCount > 0}
+            <span class="text-dim/50 font-mono text-2xs">
+              +{overflowCount}
             </span>
           {/if}
         </div>

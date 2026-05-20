@@ -9,19 +9,20 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Lutra Ledger",
-    tags: ["Svelte", "Tauri", "Rust", "SQLite"],
+    tags: ["Desktop", "Svelte", "Tauri", "Tailwind CSS", "Rust", "SQLite"],
     link: "",
     images: getProjectImages("lutra-ledger", 9),
     thumbnail: `${base}/projects/lutra-ledger/thumbnail.png`,
     videos: ["fs9QLUYGWd0"],
     pinned: true,
     type: "client",
-    slug: "lutra-ledger"
+    slug: "lutra-ledger",
+    creation_date: "2026-01-01"
   },
   {
     id: 2,
     title: "Rhythmic",
-    tags: [".NET", "React", "MySQL", "Typescript"],
+    tags: ["Web", ".NET", "React", "MySQL", "Tailwind CSS", "TypeScript"],
     link: "https://www.github.com/ARKTEEK/rhythmic",
     images: getProjectImages("rhythmic", 9),
     videos: ["u5hVYthbdV8"],
@@ -29,67 +30,74 @@ export const projects: Project[] = [
     pinned: true,
     type: "open-source",
     slug: "rhythmic",
+    creation_date: "2025-09-01"
   },
   {
     id: 3,
     title: "Blaze.lt Website",
-    tags: ["Svelte", "Tailwind CSS", "MySQL", "Typescript"],
+    tags: ["Web", "Svelte", "Tailwind CSS", "MySQL", "TypeScript"],
     link: "https://www.blaze.lt",
     images: getProjectImages("blaze-website", 7),
     videos: ["P7VnVUkZnMA "],
     pinned: false,
     type: "client",
     thumbnail: `${base}/projects/blaze-website/thumbnail.png`,
-    slug: "blaze-website"
+    slug: "blaze-website",
+    creation_date: "2025-07-10"
   },
   {
     id: 4,
     title: "shorty",
-    tags: ["Go", "SQL"],
+    tags: ["CLI", "TUI", "Go", "SQL"],
     link: "https://www.github.com/ARKTEEK/shorty",
     pinned: false,
     type: "open-source",
     thumbnail: `${base}/projects/shorty/thumbnail.png`,
-    slug: "shorty"
+    slug: "shorty",
+    creation_date: "2026-03-10"
   },
   {
     id: 7,
     title: "Timitis Order Management Platform",
-    tags: ["Java", "Spring Boot", "React", "Typescript", "MySql"],
+    tags: ["Web", "Java", "Spring Boot", "React", "TypeScript", "MySQL"],
     pinned: false,
     type: "client",
     videos: ["McqXzn5zG8w", "yl9qIP8mLWg", "dZudfP50lTg", "SuqMtAGpUt4", "bX--yZAIjJw", "btbZ6CXCuuY"],
     thumbnail: `${base}/projects/timitis/thumbnail.png`,
-    slug: "timitis"
+    slug: "timitis",
+    creation_date: "2024-10-01"
   },
   {
     id: 5,
     title: "Worsetagram",
-    tags: [".NET", "Android", "SQLite"],
+    tags: ["Android", "Firebase", "Kotlin"],
     link: "https://www.github.com/ARKTEEK/worsetagram",
     videos: ["X-nB9Nsh9P4"],
     pinned: false,
     type: "open-source",
-    slug: "worsetagram"
+    slug: "worsetagram",
+    creation_date: "2024-07-01"
   },
   {
     id: 6,
     title: "purrislav",
-    tags: ["Rust", "SQLite"],
+    tags: ["CLI", "Rust", "SQLite"],
     link: "https://www.github.com/ARKTEEK/purrislav",
     pinned: false,
     type: "open-source",
-    slug: "purrislav"
+    slug: "purrislav",
+    creation_date: "2025-02-16"
   },
   {
     id: 8,
     title: "Blackjack",
-    tags: ["Javascript", "HTML"],
+    tags: ["Web", "JavaScript", "HTML"],
     link: "https://www.github.com/ARKTEEK/blackjack",
     videos: ["Y2e4vpo76Lk "],
     pinned: false,
     type: "open-source",
-    slug: "blackjack"
+    slug: "blackjack",
+    creation_date: "2024-04-20"
   },
   {
     id: 9,
@@ -100,6 +108,7 @@ export const projects: Project[] = [
     videos: ["40dJ35G8BGk"],
     pinned: false,
     type: "open-source",
-    slug: "sortvisualizer"
+    slug: "sortvisualizer",
+    creation_date: "2024-03-18"
   },
 ]
