@@ -6,6 +6,15 @@
   import type { ProjectType } from "$lib/types";
   import { _ } from "svelte-i18n";
 
+  function byDateDesc(
+    a: (typeof projects)[number],
+    b: (typeof projects)[number],
+  ) {
+    const da = a.creation_date ? new Date(a.creation_date).getTime() : 0;
+    const db = b.creation_date ? new Date(b.creation_date).getTime() : 0;
+    return db - da;
+  }
+
   const TAG_GROUPS: Record<string, string[]> = {
     ".NET": [".NET", "C#", "ASP.NET", "ASP .NET"],
     JavaScript: ["JavaScript", "JS"],
@@ -47,7 +56,8 @@
         selectedTags.length === 0
           ? true
           : selectedTags.every((t) => projectHasTag(p, t)),
-      ),
+      )
+      .sort(byDateDesc),
   );
 
   const visibleProjects = $derived(unpinnedFiltered.slice(0, visibleCount));
@@ -110,7 +120,7 @@
         <button
           onclick={() => toggleTag(tag)}
           class="px-2.5 py-1 text-xs font-mono border transition-all cursor-pointer rounded
-            {active
+            {active
             ? 'border-accent/10 bg-accent/5 text-accent/90'
             : 'border-line text-dim bg-surface hover:border-accent/20 hover:text-lo'}">
           {tag}
@@ -164,8 +174,7 @@
       </p>
       <p class="text-sm text-lo">
         {$_("pages.projects.filters.no_results_desc")}
-      </p>
-      <button
+      </p><button
         onclick={clearFilters}
         class="mt-4 text-xs font-mono text-accent/70 hover:text-accent transition-colors cursor-pointer">
         {$_("pages.projects.filters.clear_all")}

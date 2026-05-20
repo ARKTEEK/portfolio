@@ -19,6 +19,7 @@ export interface Project {
   description?: string;
   content?: string[];
   website?: string;
+  creation_date?: string;
 }
 
 export interface Commit {
