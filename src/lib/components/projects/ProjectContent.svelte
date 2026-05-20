@@ -2,10 +2,12 @@
   let { contentLines = [] } = $props<{ contentLines: string[] }>();
 
   function fmt(text: string): string {
-    return text.replace(
-      /\*\*(.*?)\*\*/g,
-      '<span class="text-accent font-semibold">$1</span>',
-    );
+    return text
+      .replace(
+        /\*\*(.*?)\*\*/g,
+        '<span class="text-accent font-semibold">$1</span>',
+      )
+      .replace(/\*(.*?)\*/g, '<span class="text-accent/70">$1</span>');
   }
 
   type LineType = "h1" | "h2" | "h3" | "li" | "blockquote" | "p";
