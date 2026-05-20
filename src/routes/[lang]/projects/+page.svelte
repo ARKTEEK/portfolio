@@ -17,7 +17,7 @@
   }
 
   const TAG_GROUPS: Record<string, string[]> = {
-    ".NET": [".NET", "C#", "ASP.NET", "ASP .NET"],
+    "C#": [".NET", "C#", "ASP.NET", "ASP .NET"],
     JavaScript: ["JavaScript", "JS"],
     TypeScript: ["TypeScript", "TS"],
   };
@@ -57,9 +57,13 @@
 
   const pinnedProjects = $derived(projects.filter((p) => p.pinned));
 
-  const unpinnedFiltered = $derived.by(() =>
+  const hasActiveFilters = $derived(
+    selectedTags.length > 0 || selectedType !== "all",
+  );
+
+  const filteredFeed = $derived.by(() =>
     projects
-      .filter((p) => !p.pinned)
+      .filter((p) => (hasActiveFilters ? true : !p.pinned))
       .filter((p) => selectedType === "all" || p.type === selectedType)
       .filter((p) =>
         selectedTags.length === 0
@@ -69,11 +73,8 @@
       .sort(byDateDesc),
   );
 
-  const visibleProjects = $derived(unpinnedFiltered.slice(0, visibleCount));
-  const hasMore = $derived(visibleCount < unpinnedFiltered.length);
-  const hasActiveFilters = $derived(
-    selectedTags.length > 0 || selectedType !== "all",
-  );
+  const visibleProjects = $derived(filteredFeed.slice(0, visibleCount));
+  const hasMore = $derived(visibleCount < filteredFeed.length);
 
   function toggleTag(tag: string) {
     selectedTags = selectedTags.includes(tag)
@@ -105,7 +106,9 @@
   });
 </script>
 
-<svelte:head><title>{$_("pages.projects.page_title")}</title></svelte:head>
+<svelte:head>
+  <title>{$_("pages.projects.page_title")}</title>
+</svelte:head>
 
 <PageHeader
   path={$_("pages.projects.path")}
@@ -178,7 +181,7 @@
     title={hasActiveFilters
       ? $_("pages.projects.labels.filtered")
       : $_("pages.projects.labels.all")}
-    meta={projects.filter((p) => !p.pinned).length.toString()} />
+    meta={filteredFeed.length.toString()} />
 
   {#if visibleProjects.length > 0}
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
