@@ -151,7 +151,7 @@
       </p>
 
       <a
-        href="/contact"
+        href="mailto:minlekav@gmail.com"
         class="inline-flex items-center gap-2 rounded-lg border border-accent/20 px-4 py-2 text-sm text-accent transition-colors hover:bg-accent/10">
         <span class="font-mono">
           {$_("pages.services.cta.button")}
