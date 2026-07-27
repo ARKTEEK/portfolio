@@ -153,14 +153,25 @@
     }
   },
   "experience": {
+    "lutra": {
+      "role": "Freelance Software Developer",
+      "period": "January 2026 - March 2026",
+      "description": "Built a cross-platform desktop ledger application for managing orders and their documents.",
+      "highlights": [
+        "Built a cross-platform desktop ledger application using Tauri, Rust, and Svelte to achieve fast execution times and reduce memory footprint by over 70% compared to traditional web-wrapper alternatives.",
+        "Built end-to-end CRUD features for core business entities, utilizing SQLite and Diesel ORM for type-safe offline data management.",
+        "Implemented an automated PDF generation system for invoices, receipts, and orders using genpdf, eliminating manual formatting errors and accelerating the billing process.",
+        "Designed flexible user interface supporting both template-based automation and manual data entry, providing workflow adaptability that improved average document creation speed."
+      ]
+    },
     "ainera": {
       "role": "Full-Stack Software Developer Intern",
       "period": "September 2025 - November 2025",
       "description": "Focused on the end-to-end development and optimization of web applications tailored to specific client business requirements.",
       "highlights": [
-        "Developed and maintained multiple client websites using WordPress, PHP, and .NET",
-        "Customized website functionality, themes, and plugins to meet diverse client requirements",
-        "Implemented backend logic and database interactions using SQLite"
+        "Developed and maintained WordPress websites using PHP, delivering custom features and ongoing client enhancements.",
+        "Built and customized WordPress themes and plugins, extending site functionality to meet client-specific requirements.",
+        "Integrated backend services and managed SQLite database interactions in PHP, ensuring reliable data processing and application performance."
       ]
     },
     "timitis": {
@@ -168,13 +179,10 @@
       "period": "October 2024 - January 2025",
       "description": "Contributed to the full-cycle development of an IT service order management platform, bridging the gap between client requests and service delivery.",
       "highlights": [
-        "Developed a full-stack IT service order management system using React (TypeScript) and Spring Boot",
-        "Designed and exposed RESTful APIs supporting full CRUD functionality",
-        "Modeled and optimized relational databases with Spring Data JPA / Hibernate",
-        "Secured application endpoints with Spring Security (JWT/session-based if applicable)",
-        "Implemented email notifications using Spring Mail",
-        "Reduced boilerplate and improved code readability with Lombok",
-        "Worked in an Agile (Scrum) team, managing code with Git"
+        "Developed a full-stack IT service order management system using React (TypeScript) and Spring Boot to centralize order tracking.",
+        "Designed and secured RESTful APIs supporting full CRUD functionality, utilizing Spring Security and JWT for strict role-based access control, protecting data from unauthorized access.",
+        "Modeled and optimized relational database schemas utilizing Spring Data JPA and Hibernate to guarantee data integrity.",
+        "Automated email notification workflows using Spring Mail to instantly alert clients and technicians of status updates, eliminating the need for manual customer follow-ups."
       ]
     }
   },

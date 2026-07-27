@@ -153,14 +153,25 @@
     }
   },
   "experience": {
+    "lutra": {
+      "role": "Laisvai samdomas programuotojas",
+      "period": "2026 m. sausis - 2026 m. kovas",
+      "description": "Built a cross-platform desktop ledger application for managing orders and their documents.",
+      "highlights": [
+        "Sukūriau kompiuterinę apskaitos (buhalterijos) programą, veikiančią įvairiose operacinėse sistemose. Pasitelkus Tauri, Rust ir Svelte technologijas, programa veikia itin greitai ir naudoja net 70 % mažiau kompiuterio atminties nei įprastos, naršyklių pagrindu veikiančios alternatyvos.",
+        "Sukūriau pagrindines duomenų valdymo funkcijas, leidžiančias patogiai kurti, peržiūrėti, atnaujinti ir trinti verslo informaciją. Duomenys patikimai ir saugiai išsaugomi kompiuteryje net ir neturint interneto ryšio.",
+        "Įgyvendinau sistemą, kuri automatiškai sugeneruoja sąskaitų faktūrų, kvitų ir užsakymų PDF dokumentus. Tai padėjo išvengti žmogiškųjų klaidų, kurios atsiranda formatuojant dokumentus ranka, ir gerokai pagreitino atsiskaitymo procesus.",
+        "Sukūriau lanksčią vartotojo sąsają, leidžiančią rinktis: pildyti duomenis rankiniu būdu arba naudoti iš anksto paruoštus šablonus. Šis lankstumas leido vartotojams dokumentus kurti daug greičiau."
+      ]
+    },
     "ainera": {
       "role": "Full-Stack Programuotojas Praktikantas",
       "period": "2025 m. rugsėjis – 2025 m. lapkritis",
       "description": "Dirbau prie žiniatinklio programų kūrimo ir optimizavimo pagal specifinius klientų poreikius.",
       "highlights": [
-        "Kūriau ir prižiūrėjau klientų tinklalapius naudodamas WordPress, PHP ir .NET",
-        "Pritaikiau tinklalapiu˛ funkcionalumą, temas ir įskiepius pagal individualius klientų poreikius",
-        "Realizavau backend logiką ir sąveiką su duomenų bazėmis naudojant SQLite"
+        "Kūriau ir prižiūrėjau internetines svetaines, naudodamas WordPress sistemą. Pagal klientų pageidavimus diegiau naujas funkcijas ir nuolatos tobulinau svetainių veikimą.",
+        "Programavau bei asmeniškai pritaikiau svetainių dizaino temas ir įskiepius, taip praplėsdamas svetainių galimybes, kad jos atitiktų specifinius klientų poreikius.",
+        "Rūpinausi sveitainės serverio logikos dalimi (backend): apjungiau įvairias paslaugas ir tvarkiau duomenų bazių darbą, užtikrindamas, kad informacija būtų apdorojama sklandžiai ir patikimai."
       ]
     },
     "timitis": {
@@ -168,13 +179,10 @@
       "period": "2024 m. spalis – 2025 m. sausis",
       "description": "Prisidėjau prie IT paslaugų valdymo platformos kūrimo, užtikrindamas sklandų ryšį tarp klientų užklausų ir paslaugų teikimo.",
       "highlights": [
-        "Sukūriau IT paslaugų užsakymų valdymo sistemą (ERP) naudojant React (TypeScript) ir Spring Boot",
-        "Suprojektavau ir realizavau RESTful API sąsajas su pilnu CRUD funkcionalumu",
-        "Modeliavau ir optimizavau reliacines duomenų bazes naudodamas Spring Data JPA / Hibernate",
-        "Užtikrinau programos prieigos taškų saugumą naudojant Spring Security (pagrįstą JWT/sesijomis)",
-        "Įgyvendinau pranešimų siuntimą el. paštu naudojant Spring Mail",
-        "Sumažinau pasikartojančio kodo kiekį ir pagerinau jo skaitomumą naudodamas Lombok",
-        "Dirbau Agile (Scrum) komandoje, valdžiau kodą naudodamas Git"
+        "Nuo nulio sukūriau išsamią IT paslaugų užsakymų valdymo sistemą, naudodamas React, TypeScript, Java, Spring Boot, skirtą centralizuotai sekti ir valdyti klientų užsakymus vienoje vietoje.",
+        "Sukūriau saugius RESTful API pabaigos taškus, kuriais sistema bendrauja viduje. Įdiegiau griežtą apsaugą, pagrįstą darbuotojų rolėmis – kiekvienas vartotojas gali matyti ar keisti informaciją tik pagal savo pareigas, taip apsaugant jautrius duomenis nuo pašalinių asmenų.",
+        "Suprojektavau duomenų bazių struktūrą, pasinaudojant Spring Data JPA, taip, kad visa saugoma informacija būtų tvarkingai susieta tarpusavyje, išvengiant dubliavimosi ar duomenų praradimo.",
+        "Automatizavau elektroninių laiškų siuntimą, naudojant Spring Mail: sistema pati akimirksniu informuoja klientus ir technikus apie pasikeitusią užsakymo būseną. Dėl to darbuotojams nebereikia gaišti laiko rankiniu būdu informuojant klientus apie progresą."
       ]
     }
   },
