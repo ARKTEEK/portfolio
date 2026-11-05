@@ -57,20 +57,20 @@
     {/snippet}
 
     {#if thumbnailPath}
-      <div
-        class="border-line relative mx-4 mt-4 h-32 overflow-hidden rounded border">
-        <img
-          src={thumbnailPath}
-          alt={project.title}
-          class="h-full w-full object-cover" />
+        <div class="border-line relative aspect-2.5/1 overflow-hidden border-b">
+          <img
+            src={thumbnailPath}
+            alt={project.title}
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover object-center" />
         <div
-          class="absolute inset-0 bg-linear-to-t from-[#0a0a0a] to-transparent opacity-60">
+          class="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0a0a0a] to-transparent opacity-60">
         </div>
       </div>
     {:else}
       <div
-        class="border-line relative mx-4 mt-4 h-32 overflow-hidden rounded border flex items-center justify-center bg-[#0a0a0a]/50">
-        <span class="font-mono text-6xl text-dim opacity-10 tracking-widest">
+        class="border-line relative mx-4 mt-4 flex aspect-video items-center justify-center overflow-hidden rounded border bg-[#0a0a0a]/50">
+        <span class="font-mono text-6xl tracking-widest text-dim opacity-10">
           [EMPTY]
         </span>
       </div>
