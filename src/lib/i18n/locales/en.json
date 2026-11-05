@@ -187,6 +187,26 @@
     }
   },
   "projects": {
+    "pairro": {
+      "description": "A lightweight application that lets you control your computer from your Android device, including your mouse, keyboard, audio, and clipboard.",
+      "content": [
+        "# Overview",
+        "A lightweight two part application, which allows users to control they desktop computer's peripherals using their mobile device.",
+        "## Key Features",
+        "- **Mouse Control**: Real-time cursor movement, left/right clicks, dragging and selection.",
+        "- **Keyboard Input**: Send keystrokes to the host machine; Create custom key macros (e.g Win+E, Win+R).",
+        "- **Clipboard Synchronization**: Share clipboard text between mobile and desktop devices.",
+        "- **Volume Management**: Adjust host device's system volume.",
+        "## Communication",
+        "- Connection is completely local, no outside connections are being initialized.",
+        "- Both sides communicate through secure *TCP* (using *TLS*) and *UDP* (using *dTLS*) channels.",
+        "- Only paired devices can access all *TCP* and *UDP* commands, unpaired devices can only initialize pairing requests.",
+        "- Device discovery uses *mDNS*, so only local devices with certain parameters are discovered.",
+        "## Technical Stack",
+        "- **Android**: Application is written using *Kotlin* programming language, for easier design creation *Jetpack Compose* is used.",
+        "- **Desktop**: Application is written using *Java* programming language. UI part of application uses *JavaFX*."
+      ]
+    },
     "lutra-ledger": {
       "description": "A high-performance, offline-first desktop application for generating complex PDF reports from client data, built with Rust, Tauri, and Svelte.",
       "content": [

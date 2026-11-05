@@ -187,6 +187,26 @@
     }
   },
   "projects": {
+    "pairro": {
+      "description": "Programa, leidžianti valdyti kompiuterį, pasinaudojant jūsų Android įrenginiu.",
+      "content": [
+        "# Apžvalga",
+        "Dvi programos, leidžiantios naudotojams valdyti savo kompiuterio pelę, klaviatūrą, garsumą ir išsaugotas teksto iškarpas, tiesiai iš savo išmaniojo telefono.",
+        "## Pagrindinės funkcijos",
+        "- **Pelės valdymas**: be jokio delsimo valdykite savo pelę ir jos paspaudimus.",
+        "- **Klaviatūros valdymas**: Klavišų perdavimas tiesiai į kompiuterį; Kurkite ir naudokite įvairias klavišų kombinacijas (pvz., Win+E, Win+R).",
+        "- **Iškarpinės dalinimasis**: Dalinkitės savo kompiuterio ir išmaniojo telefono iškarpine per kelias sekundes.",
+        "- **Garso valdymas**: Valdykite savo kompiuterio garsumą.",
+        "## Programų komunikacija",
+        "- Ryšys yra visiškai lokalus, išoriniai ryšiai nenaudojami.",
+        "- Abi pusės bendrauja per saugius *TCP* (naudojant *TLS*) ir *UDP* (naudojant *dTLS*) kanalus.",
+        "- Tik suporuoti įrenginiai gali naudoti visas *TCP* ir *UDP* komandas, o nesuporuoti įrenginiai gali tik teikti poravimosi užklausas.",
+        "- Įrenginių paieška naudoja *mDNS*, todėl aptinkami tik tam tikrus parametrus atitinkantys lokalūs tinko įrenginiai.",
+        "## Naudojamos technologijos",
+        "- **Android**: Programėlė parašyta *Kotlin* programavimo kalba, o naudotojo sąsajai kurti naudojama *JetPack Compose* technologija.",
+        "- **Desktop**: Programėlė parašyta *Java* programavimo kalba, o naudotojo sąsaja naudoja *JavaFX* technologiją."
+      ]
+    },
     "lutra-ledger": {
       "description": "Didelio našumo kompiuterinė programa, veikianti be interneto ryšio, skirta sudėtingoms PDF ataskaitoms iš klientų duomenų generuoti. Sukurta naudojant Rust, Tauri ir Svelte.",
       "content": [

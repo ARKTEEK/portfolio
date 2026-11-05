@@ -7,6 +7,19 @@ const getProjectImages = (slug: string, count: number): string[] => {
 
 export const projects: Project[] = [
   {
+    id: 0,
+    title: "Pairro",
+    tags: ["Desktop", "Android", "Java", "Kotlin", "CSS"],
+    link: "https://github.com/Pairro-App",
+    images: getProjectImages("pairro", 9),
+    thumbnail: `${base}/projects/pairro/thumbnail.png`,
+    videos: [],
+    pinned: true,
+    type: "open-source",
+    slug: "pairro",
+    creation_date: "2026-09-17"
+  },
+  {
     id: 1,
     title: "Lutra Ledger",
     tags: ["Desktop", "Svelte", "Tauri", "Tailwind CSS", "Rust", "SQLite"],
@@ -14,7 +27,7 @@ export const projects: Project[] = [
     images: getProjectImages("lutra-ledger", 9),
     thumbnail: `${base}/projects/lutra-ledger/thumbnail.png`,
     videos: ["fs9QLUYGWd0"],
-    pinned: true,
+    pinned: false,
     type: "client",
     slug: "lutra-ledger",
     creation_date: "2026-01-01"
@@ -22,7 +35,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Rhythmic",
-    tags: ["Web", ".NET", "React", "MySQL", "Tailwind CSS", "TypeScript"],
+    tags: ["Web", "C#", ".NET", "React", "MySQL", "Tailwind CSS", "TypeScript"],
     link: "https://www.github.com/ARKTEEK/rhythmic",
     images: getProjectImages("rhythmic", 9),
     videos: ["u5hVYthbdV8"],

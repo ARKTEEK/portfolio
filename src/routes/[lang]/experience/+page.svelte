@@ -25,7 +25,9 @@
   description={$_("pages.experience.description")} />
 
 <section class="mb-8">
-  <SectionHeader title={$_("pages.experience.sections.timeline")} meta={$_("pages.experience.sections.git")} />
+  <SectionHeader
+    title={$_("pages.experience.sections.timeline")}
+    meta={$_("pages.experience.sections.git")} />
 
   <div class="hidden md:block relative">
     <div class="absolute left-1.75 top-0 bottom-0 w-px bg-accent/20"></div>
