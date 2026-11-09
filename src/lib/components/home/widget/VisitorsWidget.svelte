@@ -21,6 +21,6 @@
 
   <div class="flex items-center justify-between px-3 py-1.5 rounded-lg bg-surface/50 border border-dim/20 text-2xs font-mono text-dim">
     <span>{$_("widgets.visitors.tracking_since")}</span>
-    <span class="text-hi font-medium">2026-09-01</span>
+    <span class="text-hi font-medium">2026-11-09</span>
   </div>
 </WidgetCard>
