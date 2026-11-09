@@ -49,6 +49,11 @@
         "text": "<24h"
       }
     },
+    "visitors": {
+      "label": "Visitors",
+      "text": "Total visitors count",
+      "tracking_since": "Tracking since"
+    },
     "location": {
       "label": "Location"
     },

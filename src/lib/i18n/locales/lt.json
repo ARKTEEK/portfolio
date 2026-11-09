@@ -49,6 +49,11 @@
         "text": "<24 val."
       }
     },
+    "visitors": {
+      "label": "Lankytojai",
+      "text": "Bendras apsilankymų skaičius",
+      "tracking_since": "Sekama nuo"
+    },
     "location": {
       "label": "Lokacija"
     },

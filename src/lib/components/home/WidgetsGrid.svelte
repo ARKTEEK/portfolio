@@ -1,5 +1,6 @@
 <script lang="ts">
   import AvailabilityWidget from "./widget/AvailabilityWidget.svelte";
+  import VisitorsWidget from "./widget/VisitorsWidget.svelte";
   import LocationWidget from "./widget/LocationWidget.svelte";
   import StackWidget from "./widget/StackWidget.svelte";
   import UptimeWidget from "./widget/UptimeWidget.svelte";
@@ -15,7 +16,7 @@
 <div
   class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10 items-stretch">
   <AvailabilityWidget />
-  <LocationWidget />
+  <VisitorsWidget />
   <StackWidget
     categories={{
       backend: ["Java", ".NET / C#", "Spring Boot", "SQL"],
