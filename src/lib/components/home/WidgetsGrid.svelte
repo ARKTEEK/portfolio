@@ -1,12 +1,10 @@
 <script lang="ts">
   import AvailabilityWidget from "./widget/AvailabilityWidget.svelte";
-  import VisitorsWidget from "./widget/VisitorsWidget.svelte";
-  import LocationWidget from "./widget/LocationWidget.svelte";
   import StackWidget from "./widget/StackWidget.svelte";
   import UptimeWidget from "./widget/UptimeWidget.svelte";
+  import VisitorsWidget from "./widget/VisitorsWidget.svelte";
 
   let {
-    techTags = [],
   }: {
     techTags?: string[];
     email?: string;
@@ -14,7 +12,7 @@
 </script>
 
 <div
-  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10 items-stretch">
+  class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-3 mb-10 items-stretch">
   <AvailabilityWidget />
   <VisitorsWidget />
   <StackWidget
