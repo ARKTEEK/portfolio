@@ -16,20 +16,24 @@
 </script>
 
 <div
-  class="group relative bg-surface border-line border rounded-xl transition-all hover:border-accent/30 {klass}">
+  class="@container group relative bg-surface border-line border rounded-xl transition-all hover:border-accent/30 {klass}">
   <div
-    class="flex items-center gap-2 border-b border-line bg-black/25 px-3.5 py-2 rounded-t-[0.4rem] min-w-0">
+    class="flex items-center gap-2 border-b border-line bg-black/25 px-3.5 py-2 rounded-t-[0.7rem] min-w-0">
     <div class="flex items-center gap-1.5 min-w-0 flex-1">
       <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-[#ff5f57]"></span>
       <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-[#febc2e]"></span>
       <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-[#28c840]"></span>
+
       <span
-        class="ml-2 hidden sm:block font-mono text-2xs uppercase tracking-widest text-accent/70 truncate">
-        {path}
-      </span>
-      <span
-        class="ml-2 sm:hidden font-mono text-2xs uppercase tracking-widest text-accent/70 truncate">
+        title={path}
+        class="ml-2 hidden @xs:block @md:hidden font-mono text-2xs uppercase tracking-widest text-accent/70 truncate">
         {shortPath}
+      </span>
+
+      <span
+        title={path}
+        class="ml-2 hidden @md:block font-mono text-2xs uppercase tracking-widest text-accent/70 truncate">
+        {path}
       </span>
     </div>
 
